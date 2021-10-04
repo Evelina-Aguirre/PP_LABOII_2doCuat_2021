@@ -48,15 +48,7 @@ namespace Entidades
                 return this.dni;
             }
         }
-        //public virtual string Usuario
-        //{
-        //    get
-        //    {
-        //        return this.usuario;
-        //    }
-        //}
-        //public virtual string Clave { get; }
-        //public virtual double Sueldo { get; }
+      
         public virtual int Id
         {
             get

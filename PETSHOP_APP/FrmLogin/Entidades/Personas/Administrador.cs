@@ -24,15 +24,6 @@
         }
 
 
-    //Alta empleado 
-    //Baja empleado
-    //modificacion empleado
-
-        //Informe más ventas
-        //Informe stock
-        //Informe Ganancias (int cantidad de días )
-
-    
 
     }
 }

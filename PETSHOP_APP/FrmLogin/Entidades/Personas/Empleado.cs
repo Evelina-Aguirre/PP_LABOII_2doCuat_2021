@@ -34,24 +34,6 @@ namespace Entidades
             get { return this.sueldo; }
         }
 
-        //Alta cliente
-        //Baja cliente
-        //Modificacion cliente
-
-        
-
-
-        //public static bool operator ==(Empleado e1, Empleado e2)
-        //{
-        //    return e1.usuario == e2.usuario;
-        //}
-
-        //public static bool operator !=(Empleado e1, Empleado e2)
-        //{
-        //    return e1 != e2;
-        //}
-
-
 
     }
 }
