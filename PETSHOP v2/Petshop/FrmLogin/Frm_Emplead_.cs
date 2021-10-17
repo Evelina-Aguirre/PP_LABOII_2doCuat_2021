@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using FrmCargarNuevoCliente;
 using FrmPetShopUI;
 
 namespace Frm_Petshop_UI
@@ -29,8 +30,24 @@ namespace Frm_Petshop_UI
 
         private void Frm_Emplead__Load(object sender, EventArgs e)
         {
-            dgClientesActuales.DataSource = Tienda.Clientes;
             
+            Cliente auxCliente = new Cliente("", "", 0);
+            for (int i = 0; i < Tienda.Clientes.Count; i++)
+            {
+                auxCliente = Tienda.Clientes[i];
+
+                dgClientesActuales.ColumnCount = 5;
+                this.dgClientesActuales.Columns[0].Name = "Nombre";
+                this.dgClientesActuales.Columns[1].Name = "Apellido";
+                this.dgClientesActuales.Columns[2].Name = "Dni";
+                this.dgClientesActuales.Columns[3].Name = "Saldo";
+                this.dgClientesActuales.Columns[4].Name = "ID Cliente";
+
+
+                dgClientesActuales.Rows.Add(auxCliente.Nombre, auxCliente.Apellido, auxCliente.Dni, auxCliente.Saldo, auxCliente.Id);
+
+            }
+
         }
         private void lklblBuscarCliente_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -69,7 +86,24 @@ namespace Frm_Petshop_UI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dgClientesActuales.DataSource = Tienda.Clientes;
+            dgClientesActuales.Rows.Clear();
+      
+            Cliente auxCliente = new Cliente("", "", 0);
+            for (int i = 0; i < Tienda.Clientes.Count; i++)
+            {
+                auxCliente = Tienda.Clientes[i];
+
+                dgClientesActuales.ColumnCount = 5;
+                this.dgClientesActuales.Columns[0].Name = "Nombre";
+                this.dgClientesActuales.Columns[1].Name = "Apellido";
+                this.dgClientesActuales.Columns[2].Name = "Dni";
+                this.dgClientesActuales.Columns[3].Name = "Saldo";
+                this.dgClientesActuales.Columns[4].Name = "ID Cliente";
+
+
+                dgClientesActuales.Rows.Add(auxCliente.Nombre, auxCliente.Apellido, auxCliente.Dni, auxCliente.Saldo, auxCliente.Id);
+
+            }
             Limpiar();
         }
 
@@ -191,14 +225,14 @@ namespace Frm_Petshop_UI
                     }
                     else
                     {
-                        MessageBox.Show("El saldo del cliente no es suficiente para realizar la compra.");
+                        MessageBox.Show("El saldo del cliente no es suficiente para realizar la compra.", "Error");
 
 
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Para vender debe selecionar almenos un producto.");
+                    MessageBox.Show("Para vender debe selecionar almenos un producto.", "Error");
                 }
             }
 
@@ -217,6 +251,12 @@ namespace Frm_Petshop_UI
                 dgCarritoFrmPriuncipal.Rows.Remove(dataGridViewRow: dgCarritoFrmPriuncipal.CurrentRow);
 
             }
+        }
+
+        private void btnNuevoCliente_Click(object sender, EventArgs e)
+        {
+            FrmCrearModificarCliente frmCargarNuevoCliente = new FrmCrearModificarCliente();
+            frmCargarNuevoCliente.Show();
         }
 
         private void Frm_Emplead__MouseUp(object sender, MouseEventArgs e)

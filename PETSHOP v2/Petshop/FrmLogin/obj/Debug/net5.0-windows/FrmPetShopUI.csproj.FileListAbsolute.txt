@@ -60,3 +60,4 @@ C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_202
 C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\ref\FrmPetShopUI.dll
 C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmPetShopUI.pdb
 C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmPetShopUI.genruntimeconfig.cache
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmCargarNuevoCliente.FrmCrearModificarCliente.resources

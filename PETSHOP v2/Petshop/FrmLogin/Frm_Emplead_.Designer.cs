@@ -54,7 +54,7 @@ namespace Frm_Petshop_UI
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnNuevoCliente = new System.Windows.Forms.Button();
             this.btnVender = new System.Windows.Forms.Button();
             this.lblIdCliente = new System.Windows.Forms.Label();
             this.lblDniCliente = new System.Windows.Forms.Label();
@@ -349,14 +349,15 @@ namespace Frm_Petshop_UI
             this.txtBuscar.Text = "Buscar Cliente";
             this.txtBuscar.Click += new System.EventHandler(this.txtBuscar_Click);
             // 
-            // button2
+            // btnNuevoCliente
             // 
-            this.button2.Location = new System.Drawing.Point(1091, 116);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 38);
-            this.button2.TabIndex = 48;
-            this.button2.Text = "Nuevo Cliente";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnNuevoCliente.Location = new System.Drawing.Point(1091, 116);
+            this.btnNuevoCliente.Name = "btnNuevoCliente";
+            this.btnNuevoCliente.Size = new System.Drawing.Size(108, 38);
+            this.btnNuevoCliente.TabIndex = 48;
+            this.btnNuevoCliente.Text = "Nuevo Cliente";
+            this.btnNuevoCliente.UseVisualStyleBackColor = true;
+            this.btnNuevoCliente.Click += new System.EventHandler(this.btnNuevoCliente_Click);
             // 
             // btnVender
             // 
@@ -514,7 +515,7 @@ namespace Frm_Petshop_UI
             this.Controls.Add(this.lblDniCliente);
             this.Controls.Add(this.lblApellidoCiente);
             this.Controls.Add(this.lblNombreCliente);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnNuevoCliente);
             this.Controls.Add(this.btnVender);
             this.Controls.Add(this.dgCarritoFrmPriuncipal);
             this.Controls.Add(this.dgClientesActuales);
@@ -582,7 +583,7 @@ namespace Frm_Petshop_UI
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnNuevoCliente;
         private System.Windows.Forms.Button btnVender;
         private System.Windows.Forms.Label lblIdCliente;
         private System.Windows.Forms.Label lblDniCliente;

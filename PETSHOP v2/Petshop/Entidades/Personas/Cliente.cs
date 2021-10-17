@@ -11,11 +11,16 @@ namespace Entidades
         {
             carrito = new List<Producto>();
         }
-        public Cliente(string nombre, string apellido, int dni, List<Producto> carrito, float saldo) : this(nombre, apellido, dni)
+
+        public Cliente(string nombre, string apellido, int dni, float saldo) : this(nombre, apellido, dni)
+        {
+            this.saldo = saldo;
+        }
+        public Cliente(string nombre, string apellido, int dni, float saldo, List<Producto> carrito) : this(nombre, apellido, dni,saldo)
         {
             carrito = new List<Producto>();
             this.carrito = carrito;
-            this.saldo = saldo;
+            
         }
 
 

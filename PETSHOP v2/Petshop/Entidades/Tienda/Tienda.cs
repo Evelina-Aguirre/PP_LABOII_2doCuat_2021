@@ -227,20 +227,38 @@ namespace Entidades
             prodc1.Add(p3);
 
 
-            Cliente c1 = new Cliente("Marta", "Mendoza", 33333333, prodc1, 20000);
+            Cliente c1 = new Cliente("Marta", "Mendoza", 33860614, 20000, prodc1);
 
-            Cliente c2 = new Cliente("Diego", "Berne", 99999999, prodc1, 2000);
+            Cliente c3 = new Cliente("Franco", "Morla", 7241432, 20000, prodc1);
 
-            Cliente c3 = new Cliente("Franco", "Morla", 77777777, prodc1, 20000);
-
-            Cliente c4 = new Cliente("Lisa", "Prado", 33333333, prodc1, 20000);
+            Cliente c4 = new Cliente("Lisa", "Prado", 12111524, 20000,prodc1);
 
             clientes.Add(c1);
-            clientes.Add(c2);
             clientes.Add(c3);
             clientes.Add(c4);
 
         }
+
+        public static bool ValidarDni(string cadena)
+        {
+            if(cadena.Length < 9)
+            {
+                if(ValidarCadenaNumerica(cadena))
+                    return true;
+            }
+            return false;
+        }
+        public static bool ValidarCadenaNumerica(string cadena) 
+        { 
+            foreach (char auxChar in cadena) 
+            { 
+                if (char.IsDigit(auxChar)) 
+                    return true; 
+            } 
+            return false; 
+        }
+
+        
 
 
 
