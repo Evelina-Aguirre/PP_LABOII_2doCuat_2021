@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Entidades;
 using FrmPetShopUI;
 
-namespace FrmLogin
+namespace Frm_Petshop_UI
 {
     public partial class Frm_Emplead_ : Form
     {
@@ -78,8 +78,8 @@ namespace FrmLogin
             lblNombreCliente.Text = dgClientesActuales.CurrentRow.Cells[0].Value.ToString();
             lblApellidoCiente.Text = dgClientesActuales.CurrentRow.Cells[1].Value.ToString();
             lblDniCliente.Text = dgClientesActuales.CurrentRow.Cells[2].Value.ToString();
-            lblIdCliente.Text = dgClientesActuales.CurrentRow.Cells[3].Value.ToString();
-            lblSaldo.Text = dgClientesActuales.CurrentRow.Cells[4].Value.ToString();
+            lblIdCliente.Text = dgClientesActuales.CurrentRow.Cells[4].Value.ToString();
+            lblSaldo.Text = dgClientesActuales.CurrentRow.Cells[3].Value.ToString();
         }
 
         private void Frm_Emplead__MouseDown(object sender, MouseEventArgs e)
@@ -148,9 +148,60 @@ namespace FrmLogin
                     dgCarritoFrmPriuncipal.Rows.Add(auxProducto.Nombre, auxProducto.Marca, auxProducto.Categoria, 1, auxProducto.Precio);
 
                 }
-                
-          
-            
+            lblTotalCompra.Text = Tienda.SumarPrecioArticulosAgregados(Tienda.CompraActualDelClienteSeleccionado).ToString();
+
+        }
+
+        private void btnVender_Click(object sender, EventArgs e)
+        {
+            int auxClienteId = 0;
+            int saldo = 0;
+            float total = 0;
+
+            if (string.IsNullOrEmpty(lblNombreCliente.Text.ToString()))
+            {
+                MessageBox.Show("Para vender debe selecionar un cliente.");
+
+            }
+            else
+            {
+                if (dgCarritoFrmPriuncipal.RowCount > 0)
+                {
+                    auxClienteId = Convert.ToInt32(lblIdCliente.Text);
+                    saldo = Convert.ToInt32(lblSaldo.Text);
+                    total = Tienda.SumarPrecioArticulosAgregados(Tienda.CompraActualDelClienteSeleccionado);
+
+                    if (total <= saldo)
+                    {
+                        float aux;
+
+                        for (int i = 0; i < Tienda.Clientes.Count; i++)
+                        {
+                            if (Tienda.Clientes[i].Id == auxClienteId)
+                            {
+                                aux = Tienda.Clientes[i].Saldo - total;
+                                Tienda.Clientes[i].Saldo = aux;
+                                lblSaldo.Text = Tienda.Clientes[i].Saldo.ToString();
+                            }
+                            break;
+                        }
+                        MessageBox.Show("La venta se realizó de manera exitosa");
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("El saldo del cliente no es suficiente para realizar la compra.");
+
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Para vender debe selecionar almenos un producto.");
+                }
+            }
+
+
         }
 
         private void Frm_Emplead__MouseUp(object sender, MouseEventArgs e)

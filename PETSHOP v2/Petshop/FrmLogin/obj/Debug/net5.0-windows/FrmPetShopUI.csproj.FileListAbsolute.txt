@@ -29,3 +29,34 @@ C:\Users\Usuario\source\repos\PP_Petshop V2\PP_LABOII_2doCuat_2021\PETSHOP v2\Pe
 C:\Users\Usuario\source\repos\PP_Petshop V2\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\ref\FrmPetShopUI.dll
 C:\Users\Usuario\source\repos\PP_Petshop V2\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmPetShopUI.pdb
 C:\Users\Usuario\source\repos\PP_Petshop V2\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmPetShopUI.genruntimeconfig.cache
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\bin\Debug\net5.0-windows\FrmPetShopUI.exe
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\bin\Debug\net5.0-windows\FrmPetShopUI.deps.json
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\bin\Debug\net5.0-windows\FrmPetShopUI.runtimeconfig.json
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\bin\Debug\net5.0-windows\FrmPetShopUI.runtimeconfig.dev.json
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\bin\Debug\net5.0-windows\FrmPetShopUI.dll
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\bin\Debug\net5.0-windows\ref\FrmPetShopUI.dll
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\bin\Debug\net5.0-windows\FrmPetShopUI.pdb
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\bin\Debug\net5.0-windows\Entidades.dll
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\bin\Debug\net5.0-windows\Entidades.pdb
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmPetShopUI.csprojAssemblyReference.cache
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmPetShopUI.FrmOlvidoClave_PruebaApp.resources
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmProducto.Frm_Producto_.resources
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmPetShopUI.FrmProd_Perros.resources
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\Frm_Petshop_UI.Frm_Emplead_.resources
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\Frm_Petshop_UI.Frm_Login.resources
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmPetShopUI.Frm_ProdAves.resources
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmPetShopUI.Frm_ProdGatos_.resources
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmPetShopUI.Frm_Prodpeces.resources
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmPetShopUI.Frm_ProdReptilAnfibio.resources
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmPetShopUI.Frm_ProdRoedor.resources
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmPetShopUI.Properties.Resources.resources
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmPetShopUI.csproj.GenerateResource.cache
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmPetShopUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmPetShopUI.AssemblyInfoInputs.cache
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmPetShopUI.AssemblyInfo.cs
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmPetShopUI.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmPetShopUI.csproj.CopyComplete
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmPetShopUI.dll
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\ref\FrmPetShopUI.dll
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmPetShopUI.pdb
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmPetShopUI.genruntimeconfig.cache

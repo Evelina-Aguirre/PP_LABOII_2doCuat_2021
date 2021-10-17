@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
-using FrmLogin;
+using Frm_Petshop_UI;
 
 namespace FrmPetShopUI
 {

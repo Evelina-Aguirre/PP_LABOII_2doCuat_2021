@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\PP_Petshop V2\\PP_LABOII_2doCuat_2021\\PETSHOP v2\\Petshop\\FrmLogin\\FrmPetShopUI.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\PP_LABOII_Evelina_Aguirre_2E\\PP_LABOII_2doCuat_2021\\PETSHOP v2\\Petshop\\FrmLogin\\FrmPetShopUI.csproj",
       "projectName": "FrmPetShopUI",
-      "projectPath": "C:\\Users\\Usuario\\source\\repos\\PP_Petshop V2\\PP_LABOII_2doCuat_2021\\PETSHOP v2\\Petshop\\FrmLogin\\FrmPetShopUI.csproj",
+      "projectPath": "C:\\Users\\Usuario\\source\\repos\\PP_LABOII_Evelina_Aguirre_2E\\PP_LABOII_2doCuat_2021\\PETSHOP v2\\Petshop\\FrmLogin\\FrmPetShopUI.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\source\\repos\\PP_Petshop V2\\PP_LABOII_2doCuat_2021\\PETSHOP v2\\Petshop\\FrmLogin\\obj\\",
+      "outputPath": "C:\\Users\\Usuario\\source\\repos\\PP_LABOII_Evelina_Aguirre_2E\\PP_LABOII_2doCuat_2021\\PETSHOP v2\\Petshop\\FrmLogin\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\Usuario\\source\\repos\\PP_Petshop V2\\PP_LABOII_2doCuat_2021\\PETSHOP v2\\Petshop\\Entidades\\Entidades.csproj": {
-              "projectPath": "C:\\Users\\Usuario\\source\\repos\\PP_Petshop V2\\PP_LABOII_2doCuat_2021\\PETSHOP v2\\Petshop\\Entidades\\Entidades.csproj"
+            "C:\\Users\\Usuario\\source\\repos\\PP_LABOII_Evelina_Aguirre_2E\\PP_LABOII_2doCuat_2021\\PETSHOP v2\\Petshop\\Entidades\\Entidades.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\source\\repos\\PP_LABOII_Evelina_Aguirre_2E\\PP_LABOII_2doCuat_2021\\PETSHOP v2\\Petshop\\Entidades\\Entidades.csproj"
             }
           }
         }

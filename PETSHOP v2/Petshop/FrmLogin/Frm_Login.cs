@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Entidades;
 using FrmPetShopUI;
 
-namespace FrmLogin
+namespace Frm_Petshop_UI
 {
     public partial class Frm_Login : Form
     {

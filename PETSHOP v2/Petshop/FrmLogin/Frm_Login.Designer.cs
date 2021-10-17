@@ -1,5 +1,5 @@
 ﻿
-namespace FrmLogin
+namespace Frm_Petshop_UI
 {
     partial class Frm_Login
     {

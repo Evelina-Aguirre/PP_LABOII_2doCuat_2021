@@ -1,5 +1,5 @@
 ﻿
-namespace FrmLogin
+namespace Frm_Petshop_UI
 {
     partial class Frm_Emplead_
     {
@@ -213,11 +213,11 @@ namespace FrmLogin
             // lblTotalCompra
             // 
             this.lblTotalCompra.AutoSize = true;
+            this.lblTotalCompra.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblTotalCompra.Location = new System.Drawing.Point(543, 499);
             this.lblTotalCompra.Name = "lblTotalCompra";
-            this.lblTotalCompra.Size = new System.Drawing.Size(13, 15);
+            this.lblTotalCompra.Size = new System.Drawing.Size(0, 15);
             this.lblTotalCompra.TabIndex = 42;
-            this.lblTotalCompra.Text = "$";
             // 
             // label12
             // 
@@ -365,6 +365,7 @@ namespace FrmLogin
             this.btnVender.TabIndex = 47;
             this.btnVender.Text = "Vender";
             this.btnVender.UseVisualStyleBackColor = true;
+            this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
             // 
             // lblIdCliente
             // 

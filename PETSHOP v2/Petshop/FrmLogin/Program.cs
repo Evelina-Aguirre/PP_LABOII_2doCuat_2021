@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FrmLogin
+namespace Frm_Petshop_UI
 {
     static class Program
     {
