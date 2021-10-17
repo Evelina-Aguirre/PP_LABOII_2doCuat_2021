@@ -138,14 +138,15 @@ namespace Frm_Petshop_UI
                 {
                     auxProducto = Tienda.CompraActualDelClienteSeleccionado[i];
 
-                    dgCarritoFrmPriuncipal.ColumnCount = 5;
+                    dgCarritoFrmPriuncipal.ColumnCount = 6;
                     this.dgCarritoFrmPriuncipal.Columns[0].Name = "Nombre";
                     this.dgCarritoFrmPriuncipal.Columns[1].Name = "Marca";
                     this.dgCarritoFrmPriuncipal.Columns[2].Name = "Categoría";
                     this.dgCarritoFrmPriuncipal.Columns[3].Name = "Cantidad";
                     this.dgCarritoFrmPriuncipal.Columns[4].Name = "Precio";
+                    this.dgCarritoFrmPriuncipal.Columns[5].Name = "ID Producto";
 
-                    dgCarritoFrmPriuncipal.Rows.Add(auxProducto.Nombre, auxProducto.Marca, auxProducto.Categoria, 1, auxProducto.Precio);
+                dgCarritoFrmPriuncipal.Rows.Add(auxProducto.Nombre, auxProducto.Marca, auxProducto.Categoria, 1, auxProducto.Precio, auxProducto.Id);
 
                 }
             lblTotalCompra.Text = Tienda.SumarPrecioArticulosAgregados(Tienda.CompraActualDelClienteSeleccionado).ToString();
@@ -208,7 +209,7 @@ namespace Frm_Petshop_UI
         {
             
             Producto auxProducto = new Producto();
-            auxProducto = Tienda.BuscarProductoPorId(Convert.ToInt32(dgCarritoFrmPriuncipal.CurrentRow.Cells[4].Value));
+            auxProducto = Tienda.BuscarProductoPorId(Convert.ToInt32(dgCarritoFrmPriuncipal.CurrentRow.Cells[5].Value));
             if (dgCarritoFrmPriuncipal.RowCount > 1 && dgCarritoFrmPriuncipal.SelectedRows != null && lblTotalCompra.Text != null && dgCarritoFrmPriuncipal.CurrentRow.Cells[1].Value != null)
             {
                 lblTotalCompra.Text = Tienda.RestarPrecioArticuloBorrado(float.Parse(lblTotalCompra.Text), Convert.ToInt32(dgCarritoFrmPriuncipal.CurrentRow.Cells[4].Value)).ToString();
