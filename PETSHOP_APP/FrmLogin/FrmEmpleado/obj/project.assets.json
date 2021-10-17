@@ -1,0 +1,323 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0-windows7.0": {
+      "Entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entidades.dll": {}
+        }
+      },
+      "FrmBase/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/FrmBase.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FrmBase.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "FrmCargarNuevoCliente/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Entidades": "1.0.0",
+          "FrmBase": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FrmCargarNuevoCliente.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FrmCargarNuevoCliente.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "FrmProd/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Entidades": "1.0.0",
+          "FrmBase": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FrmProd.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FrmProd.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "FrmProdAve/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Entidades": "1.0.0",
+          "FrmProd": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FrmProdAve.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FrmProdAve.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "FrmProdRoedor/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Entidades": "1.0.0",
+          "FrmProd": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FrmProdRoedor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FrmProdRoedor.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "FrmProductosPez/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Entidades": "1.0.0",
+          "FrmProd": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FrmProductosPez.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FrmProductosPez.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "FrmProductosReptil/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Entidades": "1.0.0",
+          "FrmProd": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FrmProductosReptil.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FrmProductosReptil.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "FrmProducto_Perros/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Entidades": "1.0.0",
+          "FrmProd": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FrmProducto_Perros.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FrmProducto_Perros.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "Frm_ProdGato/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Entidades": "1.0.0",
+          "FrmProd": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Frm_ProdGato.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Frm_ProdGato.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "Entidades/1.0.0": {
+      "type": "project",
+      "path": "../Entidades/Entidades.csproj",
+      "msbuildProject": "../Entidades/Entidades.csproj"
+    },
+    "FrmBase/1.0.0": {
+      "type": "project",
+      "path": "../FrmBase/FrmBase.csproj",
+      "msbuildProject": "../FrmBase/FrmBase.csproj"
+    },
+    "FrmCargarNuevoCliente/1.0.0": {
+      "type": "project",
+      "path": "../FrmCargarNuevoCliente/FrmCargarNuevoCliente.csproj",
+      "msbuildProject": "../FrmCargarNuevoCliente/FrmCargarNuevoCliente.csproj"
+    },
+    "FrmProd/1.0.0": {
+      "type": "project",
+      "path": "../FrmProdPerros/FrmProd.csproj",
+      "msbuildProject": "../FrmProdPerros/FrmProd.csproj"
+    },
+    "FrmProdAve/1.0.0": {
+      "type": "project",
+      "path": "../FrmProdAve/FrmProdAve.csproj",
+      "msbuildProject": "../FrmProdAve/FrmProdAve.csproj"
+    },
+    "FrmProdRoedor/1.0.0": {
+      "type": "project",
+      "path": "../FrmProdRoedor/FrmProdRoedor.csproj",
+      "msbuildProject": "../FrmProdRoedor/FrmProdRoedor.csproj"
+    },
+    "FrmProductosPez/1.0.0": {
+      "type": "project",
+      "path": "../FrmProductosPez/FrmProductosPez.csproj",
+      "msbuildProject": "../FrmProductosPez/FrmProductosPez.csproj"
+    },
+    "FrmProductosReptil/1.0.0": {
+      "type": "project",
+      "path": "../FrmProductosReptil/FrmProductosReptil.csproj",
+      "msbuildProject": "../FrmProductosReptil/FrmProductosReptil.csproj"
+    },
+    "FrmProducto_Perros/1.0.0": {
+      "type": "project",
+      "path": "../FrmProducto_Perros/FrmProducto_Perros.csproj",
+      "msbuildProject": "../FrmProducto_Perros/FrmProducto_Perros.csproj"
+    },
+    "Frm_ProdGato/1.0.0": {
+      "type": "project",
+      "path": "../Frm_ProdGato/Frm_ProdGato.csproj",
+      "msbuildProject": "../Frm_ProdGato/Frm_ProdGato.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0-windows7.0": [
+      "Entidades >= 1.0.0",
+      "FrmBase >= 1.0.0",
+      "FrmCargarNuevoCliente >= 1.0.0",
+      "FrmProd >= 1.0.0",
+      "FrmProdAve >= 1.0.0",
+      "FrmProdRoedor >= 1.0.0",
+      "FrmProducto_Perros >= 1.0.0",
+      "FrmProductosPez >= 1.0.0",
+      "FrmProductosReptil >= 1.0.0",
+      "Frm_ProdGato >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\PETSHOP_APP\\FrmLogin\\FrmEmpleado\\FrmEmpleado.csproj",
+      "projectName": "FrmEmpleado",
+      "projectPath": "C:\\Users\\Usuario\\source\\repos\\PETSHOP_APP\\FrmLogin\\FrmEmpleado\\FrmEmpleado.csproj",
+      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Usuario\\source\\repos\\PETSHOP_APP\\FrmLogin\\FrmEmpleado\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0-windows7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "projectReferences": {
+            "C:\\Users\\Usuario\\source\\repos\\PETSHOP_APP\\FrmLogin\\Entidades\\Entidades.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\source\\repos\\PETSHOP_APP\\FrmLogin\\Entidades\\Entidades.csproj"
+            },
+            "C:\\Users\\Usuario\\source\\repos\\PETSHOP_APP\\FrmLogin\\FrmBase\\FrmBase.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\source\\repos\\PETSHOP_APP\\FrmLogin\\FrmBase\\FrmBase.csproj"
+            },
+            "C:\\Users\\Usuario\\source\\repos\\PETSHOP_APP\\FrmLogin\\FrmCargarNuevoCliente\\FrmCargarNuevoCliente.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\source\\repos\\PETSHOP_APP\\FrmLogin\\FrmCargarNuevoCliente\\FrmCargarNuevoCliente.csproj"
+            },
+            "C:\\Users\\Usuario\\source\\repos\\PETSHOP_APP\\FrmLogin\\FrmProdAve\\FrmProdAve.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\source\\repos\\PETSHOP_APP\\FrmLogin\\FrmProdAve\\FrmProdAve.csproj"
+            },
+            "C:\\Users\\Usuario\\source\\repos\\PETSHOP_APP\\FrmLogin\\FrmProdPerros\\FrmProd.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\source\\repos\\PETSHOP_APP\\FrmLogin\\FrmProdPerros\\FrmProd.csproj"
+            },
+            "C:\\Users\\Usuario\\source\\repos\\PETSHOP_APP\\FrmLogin\\FrmProdRoedor\\FrmProdRoedor.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\source\\repos\\PETSHOP_APP\\FrmLogin\\FrmProdRoedor\\FrmProdRoedor.csproj"
+            },
+            "C:\\Users\\Usuario\\source\\repos\\PETSHOP_APP\\FrmLogin\\FrmProductosPez\\FrmProductosPez.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\source\\repos\\PETSHOP_APP\\FrmLogin\\FrmProductosPez\\FrmProductosPez.csproj"
+            },
+            "C:\\Users\\Usuario\\source\\repos\\PETSHOP_APP\\FrmLogin\\FrmProductosReptil\\FrmProductosReptil.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\source\\repos\\PETSHOP_APP\\FrmLogin\\FrmProductosReptil\\FrmProductosReptil.csproj"
+            },
+            "C:\\Users\\Usuario\\source\\repos\\PETSHOP_APP\\FrmLogin\\FrmProducto_Perros\\FrmProducto_Perros.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\source\\repos\\PETSHOP_APP\\FrmLogin\\FrmProducto_Perros\\FrmProducto_Perros.csproj"
+            },
+            "C:\\Users\\Usuario\\source\\repos\\PETSHOP_APP\\FrmLogin\\Frm_ProdGato\\Frm_ProdGato.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\source\\repos\\PETSHOP_APP\\FrmLogin\\Frm_ProdGato\\Frm_ProdGato.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0-windows7.0": {
+        "targetAlias": "net5.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.207\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

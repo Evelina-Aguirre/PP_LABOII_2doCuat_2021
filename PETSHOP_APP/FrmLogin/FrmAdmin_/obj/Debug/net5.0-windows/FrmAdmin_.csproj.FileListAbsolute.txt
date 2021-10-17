@@ -1,0 +1,17 @@
+C:\Users\Usuario\source\repos\PETSHOP_APP\FrmLogin\FrmAdmin_\bin\Debug\net5.0-windows\FrmAdmin_.exe
+C:\Users\Usuario\source\repos\PETSHOP_APP\FrmLogin\FrmAdmin_\bin\Debug\net5.0-windows\FrmAdmin_.deps.json
+C:\Users\Usuario\source\repos\PETSHOP_APP\FrmLogin\FrmAdmin_\bin\Debug\net5.0-windows\FrmAdmin_.runtimeconfig.json
+C:\Users\Usuario\source\repos\PETSHOP_APP\FrmLogin\FrmAdmin_\bin\Debug\net5.0-windows\FrmAdmin_.runtimeconfig.dev.json
+C:\Users\Usuario\source\repos\PETSHOP_APP\FrmLogin\FrmAdmin_\bin\Debug\net5.0-windows\FrmAdmin_.dll
+C:\Users\Usuario\source\repos\PETSHOP_APP\FrmLogin\FrmAdmin_\bin\Debug\net5.0-windows\ref\FrmAdmin_.dll
+C:\Users\Usuario\source\repos\PETSHOP_APP\FrmLogin\FrmAdmin_\bin\Debug\net5.0-windows\FrmAdmin_.pdb
+C:\Users\Usuario\source\repos\PETSHOP_APP\FrmLogin\FrmAdmin_\obj\Debug\net5.0-windows\FrmAdmin.Frm_Admin.resources
+C:\Users\Usuario\source\repos\PETSHOP_APP\FrmLogin\FrmAdmin_\obj\Debug\net5.0-windows\FrmAdmin_.csproj.GenerateResource.cache
+C:\Users\Usuario\source\repos\PETSHOP_APP\FrmLogin\FrmAdmin_\obj\Debug\net5.0-windows\FrmAdmin_.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\source\repos\PETSHOP_APP\FrmLogin\FrmAdmin_\obj\Debug\net5.0-windows\FrmAdmin_.AssemblyInfoInputs.cache
+C:\Users\Usuario\source\repos\PETSHOP_APP\FrmLogin\FrmAdmin_\obj\Debug\net5.0-windows\FrmAdmin_.AssemblyInfo.cs
+C:\Users\Usuario\source\repos\PETSHOP_APP\FrmLogin\FrmAdmin_\obj\Debug\net5.0-windows\FrmAdmin_.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\PETSHOP_APP\FrmLogin\FrmAdmin_\obj\Debug\net5.0-windows\FrmAdmin_.dll
+C:\Users\Usuario\source\repos\PETSHOP_APP\FrmLogin\FrmAdmin_\obj\Debug\net5.0-windows\ref\FrmAdmin_.dll
+C:\Users\Usuario\source\repos\PETSHOP_APP\FrmLogin\FrmAdmin_\obj\Debug\net5.0-windows\FrmAdmin_.pdb
+C:\Users\Usuario\source\repos\PETSHOP_APP\FrmLogin\FrmAdmin_\obj\Debug\net5.0-windows\FrmAdmin_.genruntimeconfig.cache
