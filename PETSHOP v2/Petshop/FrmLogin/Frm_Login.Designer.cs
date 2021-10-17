@@ -1,7 +1,7 @@
 ﻿
 namespace Frm_Petshop_UI
 {
-    partial class Frm_Login
+    partial class Frm_Login_
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,7 +29,7 @@ namespace Frm_Petshop_UI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Login_));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -230,7 +230,7 @@ namespace Frm_Petshop_UI
             this.linkLabel4.Text = "      ";
             this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
-            // Frm_Login
+            // Frm_Login_
             // 
             this.AcceptButton = this.btnInicioSesion;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -253,7 +253,7 @@ namespace Frm_Petshop_UI
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Frm_Login";
+            this.Name = "Frm_Login_";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PetShop";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -283,8 +283,8 @@ namespace Frm_Petshop_UI
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.Label lblErrorMsj;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel4;
+        public System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

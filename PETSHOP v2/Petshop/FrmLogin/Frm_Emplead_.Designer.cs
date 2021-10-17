@@ -29,6 +29,7 @@ namespace Frm_Petshop_UI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Emplead_));
             this.btnPerros = new System.Windows.Forms.Button();
             this.btnGatoa = new System.Windows.Forms.Button();
@@ -67,6 +68,10 @@ namespace Frm_Petshop_UI
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.btnRemoverProducto = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.lblMsjErrorLogAdmin = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgCarritoFrmPriuncipal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientesActuales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -441,6 +446,7 @@ namespace Frm_Petshop_UI
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
+            this.linkLabel2.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel2.Image = ((System.Drawing.Image)(resources.GetObject("linkLabel2.Image")));
             this.linkLabel2.LinkColor = System.Drawing.Color.Transparent;
@@ -497,6 +503,48 @@ namespace Frm_Petshop_UI
             this.btnRemoverProducto.UseVisualStyleBackColor = true;
             this.btnRemoverProducto.Click += new System.EventHandler(this.btnAgregarACarrito_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(-8, 541);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(53, 44);
+            this.button2.TabIndex = 61;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // lblMsjErrorLogAdmin
+            // 
+            this.lblMsjErrorLogAdmin.AutoSize = true;
+            this.lblMsjErrorLogAdmin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblMsjErrorLogAdmin.Location = new System.Drawing.Point(47, 556);
+            this.lblMsjErrorLogAdmin.Name = "lblMsjErrorLogAdmin";
+            this.lblMsjErrorLogAdmin.Size = new System.Drawing.Size(0, 15);
+            this.lblMsjErrorLogAdmin.TabIndex = 62;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(-8, -7);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(53, 44);
+            this.button4.TabIndex = 63;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Frm_Emplead_
             // 
             this.AcceptButton = this.lklblBuscarCliente;
@@ -504,6 +552,9 @@ namespace Frm_Petshop_UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(1248, 585);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.lblMsjErrorLogAdmin);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnRemoverProducto);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox1);
@@ -545,6 +596,7 @@ namespace Frm_Petshop_UI
             this.Name = "Frm_Emplead_";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTienda";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frm_Emplead__FormClosing);
             this.Load += new System.EventHandler(this.Frm_Emplead__Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Frm_Emplead__MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Frm_Emplead__MouseMove);
@@ -558,44 +610,47 @@ namespace Frm_Petshop_UI
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnPerros;
-        private System.Windows.Forms.Button btnGatoa;
-        private System.Windows.Forms.Button btnAves;
-        private System.Windows.Forms.Button btnPeces;
-        private System.Windows.Forms.Button btnRoedores;
-        private System.Windows.Forms.Button btnReptilesAnfibios;
-        private System.Windows.Forms.Label label1;
         public System.Windows.Forms.DataGridView dgCarritoFrmPriuncipal;
-        private System.Windows.Forms.DataGridView dgClientesActuales;
-        private System.Windows.Forms.Label lblSaldo;
-        private System.Windows.Forms.Label label9;
         public System.Windows.Forms.Label lblTotalCompra;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label lblNumCliente;
-        private System.Windows.Forms.Label lblDni;
-        private System.Windows.Forms.Label lblApellido;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Button btnNuevoCliente;
-        private System.Windows.Forms.Button btnVender;
-        private System.Windows.Forms.Label lblIdCliente;
-        private System.Windows.Forms.Label lblDniCliente;
-        private System.Windows.Forms.Label lblApellidoCiente;
-        private System.Windows.Forms.Label lblNombreCliente;
-        private System.Windows.Forms.LinkLabel lklblBuscarCliente;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button3;
         public System.Windows.Forms.Button btnRemoverProducto;
+        public System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Button btnPerros;
+        public System.Windows.Forms.Button btnGatoa;
+        public System.Windows.Forms.Button btnAves;
+        public System.Windows.Forms.Button btnPeces;
+        public System.Windows.Forms.Button btnRoedores;
+        public System.Windows.Forms.Button btnReptilesAnfibios;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.DataGridView dgClientesActuales;
+        public System.Windows.Forms.Label lblSaldo;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label label12;
+        public System.Windows.Forms.Label lblNumCliente;
+        public System.Windows.Forms.Label lblDni;
+        public System.Windows.Forms.Label lblApellido;
+        public System.Windows.Forms.Label lblNombre;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox txtBuscar;
+        public System.Windows.Forms.Button btnNuevoCliente;
+        public System.Windows.Forms.Button btnVender;
+        public System.Windows.Forms.Label lblIdCliente;
+        public System.Windows.Forms.Label lblDniCliente;
+        public System.Windows.Forms.Label lblApellidoCiente;
+        public System.Windows.Forms.Label lblNombreCliente;
+        public System.Windows.Forms.LinkLabel lklblBuscarCliente;
+        public System.Windows.Forms.LinkLabel linkLabel1;
+        public System.Windows.Forms.LinkLabel linkLabel2;
+        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label lblMsjErrorLogAdmin;
+        private System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.Button button4;
     }
 }
 

@@ -234,6 +234,16 @@ namespace FrmProducto
             lblMarcaProducto.Text = dgProductos.CurrentRow.Cells[1].Value.ToString();
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+        }
+
         private void Frm_Producto_MouseUp(object sender, MouseEventArgs e)
         {
             m = 0;

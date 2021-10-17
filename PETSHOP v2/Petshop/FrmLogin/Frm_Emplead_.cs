@@ -17,6 +17,7 @@ namespace Frm_Petshop_UI
     {
         List<Producto> auxlistProductoFrmEmpleado;
         
+        
         int m, mx, my;
         private Producto listaCarrito;
 
@@ -217,8 +218,9 @@ namespace Frm_Petshop_UI
                                 aux = Tienda.Clientes[i].Saldo - total;
                                 Tienda.Clientes[i].Saldo = aux;
                                 lblSaldo.Text = Tienda.Clientes[i].Saldo.ToString();
+                                break;
                             }
-                            break;
+                           
                         }
                         MessageBox.Show("La venta se realizó de manera exitosa");
 
@@ -255,8 +257,38 @@ namespace Frm_Petshop_UI
 
         private void btnNuevoCliente_Click(object sender, EventArgs e)
         {
-            FrmCrearModificarCliente frmCargarNuevoCliente = new FrmCrearModificarCliente();
-            frmCargarNuevoCliente.Show();
+            lblMsjErrorLogAdmin.Text = "Para cargar un nuevo cliente debe loguearse como Admin.";
+            timer1.Start();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            lblMsjErrorLogAdmin.Text = "Para ingresar a configuración loguearse con perfil de Administrador.";
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblMsjErrorLogAdmin.Text = String.Empty;
+            timer1.Stop();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta= MessageBox.Show("¿Desea cambiar de usuario?", "Cambio Usuario",MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            
+            if(respuesta == DialogResult.OK)
+            {
+                FrmCambiarPerfil frmCambiaPerfil = new FrmCambiarPerfil();
+                frmCambiaPerfil.ShowDialog();
+                this.Hide();
+            }
+  
+        }
+
+        private void Frm_Emplead__FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
 
         private void Frm_Emplead__MouseUp(object sender, MouseEventArgs e)
@@ -266,10 +298,10 @@ namespace Frm_Petshop_UI
 
         private void Frm_Emplead__MouseMove(object sender, MouseEventArgs e)
         {
-            if (m == 1)
-            {
-                this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
-            }
+            //if (m == 1)
+            //{
+            //    this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
+            //}
 
         }
     }

@@ -12,12 +12,12 @@ using FrmPetShopUI;
 
 namespace Frm_Petshop_UI
 {
-    public partial class Frm_Login : Form
+    public partial class Frm_Login_ : Form
     {
        
         int m, mx, my;
 
-        public Frm_Login()
+        public Frm_Login_()
         {
             InitializeComponent();
         }

@@ -21,7 +21,7 @@ namespace FrmCargarNuevoCliente
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtNombre.Text != null)
+            if (!string.IsNullOrEmpty(txtNombre.Text) && !string.IsNullOrEmpty(txtSaldo.Text))
             {
                 int auxDni = 0;
                 int auxSaldo = 0;
@@ -40,12 +40,23 @@ namespace FrmCargarNuevoCliente
                 this.Hide();
             }
             else
-                MessageBox.Show("Debe completar el nombre del cliente para poder cargarlo","Error");
+                MessageBox.Show("Debe completar el nombre y saldo del cliente para poder cargarlo","Error");
         }
 
         private void FrmCrearModificarCliente_Load(object sender, EventArgs e)
         {
          
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

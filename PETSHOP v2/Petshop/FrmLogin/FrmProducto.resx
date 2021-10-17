@@ -1916,4 +1916,19 @@
         ydpR6XS9KAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="linkLabel2.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACYAAAAhCAYAAAC1ONkWAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAI1JREFUWEft0kEKwCAMRNGue4Neyfvfx5KFm2BIJkYQmcKjqAU/1uf9Wj8Rw1AM
+        QzEMxTAUw1B3hckzm9ei382kT8zb1Fv3LP1Ka3NrHrF8x3SEHmeVXP4RM94VSsJEZZS498R0jB5nLYVZ
+        EdY8Ih3mbe6te1Jh0U2j382UXP4dGIZiGIphKIahDg1r/QfRTy1Ctl1K/wAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="linkLabel1.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABUAAAASCAYAAAC0EpUuAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAADFJREFUOE9j4JL0+k9tPGoodglK8Kih2CUowVgNJQVg0z8aptglKMGjhmKXIB97
+        /QcA3681x6BZ9CAAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>
