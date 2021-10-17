@@ -66,6 +66,7 @@ namespace Frm_Petshop_UI
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.btnRemoverProducto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgCarritoFrmPriuncipal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientesActuales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -171,7 +172,7 @@ namespace Frm_Petshop_UI
             this.dgCarritoFrmPriuncipal.Name = "dgCarritoFrmPriuncipal";
             this.dgCarritoFrmPriuncipal.RowTemplate.Height = 25;
             this.dgCarritoFrmPriuncipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgCarritoFrmPriuncipal.Size = new System.Drawing.Size(676, 123);
+            this.dgCarritoFrmPriuncipal.Size = new System.Drawing.Size(626, 123);
             this.dgCarritoFrmPriuncipal.TabIndex = 46;
             this.dgCarritoFrmPriuncipal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCarritoFrmPriuncipal_CellContentClick);
             // 
@@ -481,6 +482,20 @@ namespace Frm_Petshop_UI
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // btnRemoverProducto
+            // 
+            this.btnRemoverProducto.FlatAppearance.BorderSize = 0;
+            this.btnRemoverProducto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRemoverProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRemoverProducto.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnRemoverProducto.Location = new System.Drawing.Point(1143, 378);
+            this.btnRemoverProducto.Name = "btnRemoverProducto";
+            this.btnRemoverProducto.Size = new System.Drawing.Size(43, 38);
+            this.btnRemoverProducto.TabIndex = 60;
+            this.btnRemoverProducto.Text = "-";
+            this.btnRemoverProducto.UseVisualStyleBackColor = true;
+            this.btnRemoverProducto.Click += new System.EventHandler(this.btnAgregarACarrito_Click);
+            // 
             // Frm_Emplead_
             // 
             this.AcceptButton = this.lklblBuscarCliente;
@@ -488,6 +503,7 @@ namespace Frm_Petshop_UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(1248, 585);
+            this.Controls.Add(this.btnRemoverProducto);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
@@ -578,6 +594,7 @@ namespace Frm_Petshop_UI
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button3;
+        public System.Windows.Forms.Button btnRemoverProducto;
     }
 }
 

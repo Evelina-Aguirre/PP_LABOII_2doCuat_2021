@@ -204,6 +204,20 @@ namespace Frm_Petshop_UI
 
         }
 
+        private void btnAgregarACarrito_Click(object sender, EventArgs e)
+        {
+            
+            Producto auxProducto = new Producto();
+            auxProducto = Tienda.BuscarProductoPorId(Convert.ToInt32(dgCarritoFrmPriuncipal.CurrentRow.Cells[4].Value));
+            if (dgCarritoFrmPriuncipal.RowCount > 1 && dgCarritoFrmPriuncipal.SelectedRows != null && lblTotalCompra.Text != null && dgCarritoFrmPriuncipal.CurrentRow.Cells[1].Value != null)
+            {
+                lblTotalCompra.Text = Tienda.RestarPrecioArticuloBorrado(float.Parse(lblTotalCompra.Text), Convert.ToInt32(dgCarritoFrmPriuncipal.CurrentRow.Cells[4].Value)).ToString();
+                Tienda.CompraActualDelClienteSeleccionado.Remove(auxProducto);
+                dgCarritoFrmPriuncipal.Rows.Remove(dataGridViewRow: dgCarritoFrmPriuncipal.CurrentRow);
+
+            }
+        }
+
         private void Frm_Emplead__MouseUp(object sender, MouseEventArgs e)
         {
             m = 0;
