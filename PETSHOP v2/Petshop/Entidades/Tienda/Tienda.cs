@@ -62,38 +62,6 @@ namespace Entidades
 
 
 
-
-
-        public static bool CargarEmpleados(Empleado p)
-        {
-
-            foreach (Empleado item in empleados)
-            {
-                if (item != p)
-                {
-                    empleados.Add(p);
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        public static void SumarProductosDeEsteRubroAlCarrito(List<Producto> auxListaAAgregarCarrito)
-        {
-            foreach (Producto item in auxListaAAgregarCarrito)
-            {
-                compraActualDelClienteSeleccionado.Add(item);
-            }
-        }
-
-        public static void ComprarStock(List<Producto> auxListaAAgregarCarrito)
-        {
-            foreach (Producto item in auxListaAAgregarCarrito)
-            {
-                stock.Add(item);
-            }
-        }
-
         public static void CargarEmpleadosActuales()
         {
             Empleado e1 = new Empleado("María", "Perez", 33333333, 90000, "maria", "maria123");
@@ -105,16 +73,7 @@ namespace Entidades
             empleados.Add(e2);
             empleados.Add(a1);
         }
-        public static bool VerificarSaldoSuficiente(int saldo, int totalCompra)
-        {
-            if (saldo >= totalCompra)
-                return true;
-            else
-            {
-                ClienteSinDineroExcepcion clientesinDineroEx = new ClienteSinDineroExcepcion();
-                throw clientesinDineroEx;
-            }
-        }
+        
 
         public static void CargarProducto()
         {
@@ -248,10 +207,21 @@ namespace Entidades
 
         }
 
-
-        public static void CargarEnSistemaStockTienda()
+        /// <summary>
+        /// Compara dos valores e informa si es posible restarlos.
+        /// </summary>
+        /// <param name="saldo"></param>
+        /// <param name="totalCompra"></param>
+        /// <returns></returns>
+        public static bool VerificarSaldoSuficiente(int saldo, int totalCompra)
         {
-            
+            if (saldo >= totalCompra)
+                return true;
+            else
+            {
+                ClienteSinDineroExcepcion clientesinDineroEx = new ClienteSinDineroExcepcion();
+                throw clientesinDineroEx;
+            }
         }
         public static void CargarClientes()
         {
@@ -276,6 +246,11 @@ namespace Entidades
 
         }
 
+        /// <summary>
+        /// Valida DNI.
+        /// </summary>
+        /// <param name="cadena"></param>
+        /// <returns>True si la cadena puede ser atribuída a un núm. de Dni, false si no</returns>
         public static bool ValidarDni(string cadena)
         {
             if(cadena.Length < 9)
@@ -285,6 +260,12 @@ namespace Entidades
             }
             return false;
         }
+
+        /// <summary>
+        /// valida que la cadena recibida esté compuesto de dígitos numéricos.
+        /// </summary>
+        /// <param name="cadena"></param>
+        /// <returns>True si la cadena es numérica, false si no lo está.</returns>
         public static bool ValidarCadenaNumerica(string cadena) 
         { 
             foreach (char auxChar in cadena) 
@@ -297,7 +278,12 @@ namespace Entidades
 
         
 
-
+        /// <summary>
+        /// Verifica si usuario y clave pertenecen a usuarios ya registrados en la app.
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <param name="clave"></param>
+        /// <returns>objeto Empleado si lo gró loguearlo</returns>
 
         public static Empleado LogIn(string usuario, string clave)
         {
@@ -325,6 +311,11 @@ namespace Entidades
         }
 
     
+        /// <summary>
+        /// Permite encontrar un producto por número de id;
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Objeto producto de encontrarlo,o el mismo null de no ser así</returns>
         public static Producto BuscarProductoPorId(int id)
         {
             for (int i = 0; i < Tienda.ProductosDisponibles.Count; i++)
@@ -335,6 +326,11 @@ namespace Entidades
             return null;
         }
 
+        /// <summary>
+        /// Permite encontrar un producto por Nombre o Marca.
+        /// </summary>
+        /// <param name="aux"></param>
+        /// <returns></returns>
         public static List<Producto> BuscarProducto(string aux)
         {
             List<Producto> listaAux = new List<Producto>();
@@ -356,6 +352,12 @@ namespace Entidades
             }
             return listaAux;
         }
+
+        /// <summary>
+        /// Busca clientes por su ID.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Objeto Cliente</returns>
         public static Cliente BuscarClientePorId(int id)
         {
             for (int i = 0; i < Tienda.clientes.Count; i++)
@@ -367,6 +369,11 @@ namespace Entidades
             return null;
         }
 
+        /// <summary>
+        /// Busca un empleado por su ID.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Objeto empleado.</returns>
         public static Empleado BuscarEmpleadoPorId(int id)
         {
             for (int i = 0; i < Tienda.empleados.Count; i++)
@@ -378,6 +385,11 @@ namespace Entidades
             return null;
         }
 
+        /// <summary>
+        /// Busca clientes por nombre o apellido.
+        /// </summary>
+        /// <param name="aux"></param>
+        /// <returns>Devuelve una lista con los clientes que coincidan con la búsqueda.</returns>
         public static List<Cliente> BuscarCliente(string aux)
         {
             List<Cliente> clientesAux = new List<Cliente>();
@@ -400,6 +412,11 @@ namespace Entidades
             return clientesAux;
         }
 
+        /// <summary>
+        /// Recibe una lista de productos y suma los precios de cada ítem.
+        /// </summary>
+        /// <param name="auxLista"></param>
+        /// <returns>Total de la suma de precios de la lista</returns>
         public static float SumarPrecioArticulosAgregados(List<Producto> auxLista)
         {
             float acumulado = 0;
@@ -410,6 +427,12 @@ namespace Entidades
             return acumulado;
         }
 
+        /// <summary>
+        /// Resta los valores obtenidos por parámetro.
+        /// </summary>
+        /// <param name="auxTotalActual"></param>
+        /// <param name="producto"></param>
+        /// <returns>Total restado</returns>
         public static float RestarPrecioArticuloBorrado(float auxTotalActual, int producto)
         {
             return auxTotalActual - producto;
@@ -424,6 +447,11 @@ namespace Entidades
 
         }
 
+        /// <summary>
+        /// Permite restar un valor al saldo de la tienda.
+        /// </summary>
+        /// <param name="auxTotalaRestar"></param>
+        /// <returns></returns>
         public static float SumarADeSaldoTienda(float auxTotalaRestar)
         {
             float saldoTiendaActualizado;
@@ -433,6 +461,11 @@ namespace Entidades
 
         }
 
+        /// <summary>
+        /// Permite buscar clientes por Id.
+        /// </summary>
+        /// <param name="aux"></param>
+        /// <returns></returns>
         public static List<Cliente> BuscarCliente(int aux)
         {
             List<Cliente> clientesAux = new List<Cliente>();
@@ -449,6 +482,11 @@ namespace Entidades
             return clientesAux;
         }
 
+        /// <summary>
+        /// Agrega empleados a la lista de estos de la clase tienda.
+        /// </summary>
+        /// <param name="empleado"></param>
+        /// <returns></returns>
         public static bool AgregarEmpleado(Empleado empleado)
         {
             for (int i = 0; i < empleados.Count; i++)
@@ -462,17 +500,65 @@ namespace Entidades
             return false;
         }
 
-        public static bool AgregarCliente(Cliente cliente)
+        /// <summary>
+        /// Agrega un cliente a la lista.
+        /// </summary>
+        /// <param name="cliente"></param>
+        /// <returns></returns>
+        public static bool AgregarCliente(Cliente auxCliente)
         {
-            for (int i = 0; i < empleados.Count; i++)
+            for (int i = 0; i < clientes.Count; i++)
             {
-                if (cliente != clientes[i])
+                if (auxCliente != clientes[i])
                 {
-                    clientes.Add(cliente);
+                    clientes.Add(auxCliente);
                     return true;
                 }
             }
             return false;
+        }
+
+        /// <summary>
+        /// Permite agregar nuevos empleados a la lista ya existente.
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
+        public static bool CargarEmpleados(Empleado p)
+        {
+
+            foreach (Empleado item in empleados)
+            {
+                if (item != p)
+                {
+                    empleados.Add(p);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Suma una lista de Productos a la compra que se esté realizando en el momento.
+        /// </summary>
+        /// <param name="auxListaAAgregarCarrito"></param>
+        public static void SumarProductosDeEsteRubroAlCarrito(List<Producto> auxListaAAgregarCarrito)
+        {
+            foreach (Producto item in auxListaAAgregarCarrito)
+            {
+                compraActualDelClienteSeleccionado.Add(item);
+            }
+        }
+
+        /// <summary>
+        /// Permita agregar productos a los que ya hay en stock.
+        /// </summary>
+        /// <param name="auxListaAAgregarCarrito"></param>
+        public static void ComprarStock(List<Producto> auxListaAAgregarCarrito)
+        {
+            foreach (Producto item in auxListaAAgregarCarrito)
+            {
+                stock.Add(item);
+            }
         }
     }
 }
