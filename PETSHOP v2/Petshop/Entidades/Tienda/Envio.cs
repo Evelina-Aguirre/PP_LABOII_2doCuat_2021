@@ -6,8 +6,8 @@ namespace Entidades
     {
         public enum EFormaEnvio
         {
-            moto,
-            miniflete
+            moto = 120,
+            miniflete = 300
         }
 
         public static float distancia;
@@ -32,8 +32,10 @@ namespace Entidades
                 formaDeEnvio = Envio.EFormaEnvio.moto;
             }
 
-                return formaDeEnvio;
+            return formaDeEnvio;
         }
+
+       
 
         public static float CalcularPeso(List<Producto> auxProductos)
         {

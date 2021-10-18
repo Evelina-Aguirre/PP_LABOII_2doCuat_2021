@@ -198,18 +198,19 @@ namespace FrmCargarNuevoCliente
         }
 
         #endregion
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtDni;
-        private System.Windows.Forms.TextBox txtApellito;
-        private System.Windows.Forms.TextBox txtSaldo;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnGuardarDatosNuevoCliente;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.TextBox txtDni;
+        public System.Windows.Forms.TextBox txtApellito;
+        public System.Windows.Forms.TextBox txtSaldo;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Button btnGuardarDatosNuevoCliente;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.LinkLabel linkLabel2;
+        public System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

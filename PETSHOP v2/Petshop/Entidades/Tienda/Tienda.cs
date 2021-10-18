@@ -300,16 +300,7 @@ namespace Entidades
             return null;
         }
 
-        public static bool AgregarProducto()
-        {
-            return false;
-        }
-
-        public static void cargarProductos()
-        {
-
-        }
-
+    
         public static Producto BuscarProductoPorId(int id)
         {
             for (int i = 0; i < Tienda.Stock.Count; i++)
@@ -352,6 +343,16 @@ namespace Entidades
             return null;
         }
 
+        public static Empleado BuscarEmpleadoPorId(int id)
+        {
+            for (int i = 0; i < Tienda.Empleados.Count; i++)
+            {
+                if (id == Tienda.Empleados[i].Id)
+                    return Tienda.Empleados[i];
+
+            }
+            return null;
+        }
 
         public static List<Cliente> BuscarCliente(string aux)
         {

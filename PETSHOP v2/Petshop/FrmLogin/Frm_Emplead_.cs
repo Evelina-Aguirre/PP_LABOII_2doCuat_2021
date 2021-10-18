@@ -192,7 +192,17 @@ namespace Frm_Petshop_UI
 
                 }
             lblTotalCompra.Text = Tienda.SumarPrecioArticulosAgregados(Tienda.CompraActualDelClienteSeleccionado).ToString();
-            lblCostoDeEnvio.Text = Envio.CalcularFormadeEnvio(auxCliente, Tienda.CompraActualDelClienteSeleccionado).ToString();
+            Envio.EFormaEnvio formaEnvio = Envio.CalcularFormadeEnvio(auxCliente, Tienda.CompraActualDelClienteSeleccionado);
+            lblModoEnvio.Text = formaEnvio.ToString();
+            
+            if (formaEnvio == Envio.EFormaEnvio.moto)
+            {
+                lblEnvio.Text = "120";
+            }
+            else
+            {
+                lblEnvio.Text = "300";
+            }
 
         }
 
@@ -215,7 +225,7 @@ namespace Frm_Petshop_UI
                     auxClienteId = Convert.ToInt32(lblIdCliente.Text);
                     saldo = Convert.ToInt32(lblSaldo.Text);
                     total = Tienda.SumarPrecioArticulosAgregados(Tienda.CompraActualDelClienteSeleccionado);
-                    totalConEnvio = Convert.ToInt32(lblTotalCompra) + Convert.ToInt32(lblCostoDeEnvio);
+                    totalConEnvio = Convert.ToInt32(lblTotalCompra.Text) + Convert.ToInt32(lblEnvio.Text);
 
                     if (totalConEnvio <= saldo)
                     {

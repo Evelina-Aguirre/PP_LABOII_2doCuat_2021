@@ -73,8 +73,9 @@ namespace Frm_Petshop_UI
             this.button4 = new System.Windows.Forms.Button();
             this.lblErrorNuevoCliente = new System.Windows.Forms.Label();
             this.btnEditarCliente = new System.Windows.Forms.Button();
-            this.lblCostoDeEnvio = new System.Windows.Forms.Label();
+            this.lblModoEnvio = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.lblEnvio = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgCarritoFrmPriuncipal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientesActuales)).BeginInit();
             this.SuspendLayout();
@@ -573,14 +574,14 @@ namespace Frm_Petshop_UI
             this.btnEditarCliente.UseVisualStyleBackColor = false;
             this.btnEditarCliente.Click += new System.EventHandler(this.btnEditarCliente_Click);
             // 
-            // lblCostoDeEnvio
+            // lblModoEnvio
             // 
-            this.lblCostoDeEnvio.AutoSize = true;
-            this.lblCostoDeEnvio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCostoDeEnvio.Location = new System.Drawing.Point(613, 480);
-            this.lblCostoDeEnvio.Name = "lblCostoDeEnvio";
-            this.lblCostoDeEnvio.Size = new System.Drawing.Size(0, 15);
-            this.lblCostoDeEnvio.TabIndex = 67;
+            this.lblModoEnvio.AutoSize = true;
+            this.lblModoEnvio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblModoEnvio.Location = new System.Drawing.Point(721, 480);
+            this.lblModoEnvio.Name = "lblModoEnvio";
+            this.lblModoEnvio.Size = new System.Drawing.Size(0, 15);
+            this.lblModoEnvio.TabIndex = 67;
             // 
             // label10
             // 
@@ -592,6 +593,15 @@ namespace Frm_Petshop_UI
             this.label10.TabIndex = 66;
             this.label10.Text = "Costo de envio:";
             // 
+            // lblEnvio
+            // 
+            this.lblEnvio.AutoSize = true;
+            this.lblEnvio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblEnvio.Location = new System.Drawing.Point(606, 480);
+            this.lblEnvio.Name = "lblEnvio";
+            this.lblEnvio.Size = new System.Drawing.Size(0, 15);
+            this.lblEnvio.TabIndex = 68;
+            // 
             // Frm_Emplead_
             // 
             this.AcceptButton = this.lklblBuscarCliente;
@@ -599,7 +609,8 @@ namespace Frm_Petshop_UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(1248, 585);
-            this.Controls.Add(this.lblCostoDeEnvio);
+            this.Controls.Add(this.lblEnvio);
+            this.Controls.Add(this.lblModoEnvio);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btnEditarCliente);
             this.Controls.Add(this.lblErrorNuevoCliente);
@@ -701,8 +712,9 @@ namespace Frm_Petshop_UI
         public System.Windows.Forms.Button btnConfiguracion;
         private System.Windows.Forms.Label lblErrorNuevoCliente;
         private System.Windows.Forms.Button btnEditarCliente;
-        public System.Windows.Forms.Label lblCostoDeEnvio;
+        public System.Windows.Forms.Label lblModoEnvio;
         public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.Label lblEnvio;
     }
 }
 
