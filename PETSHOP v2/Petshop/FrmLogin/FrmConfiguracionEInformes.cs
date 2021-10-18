@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace FrmPetShopUI
 {
@@ -42,6 +43,17 @@ namespace FrmPetShopUI
         {
             FrmABMUsuariosTienda frmabmUsuarios = new FrmABMUsuariosTienda();
             frmabmUsuarios.ShowDialog();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FrmInformes frmInformes = new FrmInformes();
+            frmInformes.ShowDialog();
         }
     }
 }

@@ -21,8 +21,8 @@ namespace FrmPetShopUI
 
         private void FrmRenovarSrockProductos_Load(object sender, EventArgs e)
         {
-            dgProductosDisponibles.DataSource = Tienda.ProductosDisponibles;
-            lblSaldoDisponibleTienda.Text = Tienda.saldoTienda.ToString();
+            dgProductosDisponibles.DataSource = Tienda.Stock;
+            lblSaldoDisponibleTienda.Text = Tienda.SaldoTienda.ToString();
         }
 
         private void dgProductosDisponibles_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -88,7 +88,7 @@ namespace FrmPetShopUI
         {
             int totalCompra =Convert.ToInt32(lblTotalCompra.Text);
             float saldoRestante;
-            if (Tienda.saldoTienda >= totalCompra)
+            if (Tienda.SaldoTienda >= totalCompra)
             {
                 Tienda.ComprarStock(listaauxProducto);
                 saldoRestante = Tienda.RestarSumaDeSaldoTienda(totalCompra);
@@ -123,7 +123,7 @@ namespace FrmPetShopUI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dgProductosDisponibles.DataSource = Tienda.ProductosDisponibles;
+            dgProductosDisponibles.DataSource = Tienda.Stock;
         }
     }
 }

@@ -9,17 +9,14 @@ namespace Frm_Petshop_UI
 {
     public partial class Frm_Emplead_ : Form
     {
-        List<Producto> auxlistProductoFrmEmpleado;
-
-
+        
         int m, mx, my;
         private Producto listaCarrito;
 
         public Frm_Emplead_()
         {
             InitializeComponent();
-            auxlistProductoFrmEmpleado = new List<Producto>();
-
+            
         }
 
 
@@ -257,6 +254,8 @@ namespace Frm_Petshop_UI
                             }
 
                         }
+                        
+                        Venta.RegistrarVenta(Tienda.CompraActualDelClienteSeleccionado);
                         Tienda.SumarADeSaldoTienda(totalConEnvio);
                         SoundPlayer sonidoVenta = new SoundPlayer(@"C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\Sonido\Windows Unlock.wav");
                         sonidoVenta.Play();

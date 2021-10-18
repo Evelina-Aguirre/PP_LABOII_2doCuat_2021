@@ -40,7 +40,7 @@ namespace FrmPetShopUI
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(52, 44);
+            this.button1.Location = new System.Drawing.Point(37, 44);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(340, 23);
             this.button1.TabIndex = 0;
@@ -56,7 +56,7 @@ namespace FrmPetShopUI
             this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel2.Image = ((System.Drawing.Image)(resources.GetObject("linkLabel2.Image")));
             this.linkLabel2.LinkColor = System.Drawing.Color.Transparent;
-            this.linkLabel2.Location = new System.Drawing.Point(349, 0);
+            this.linkLabel2.Location = new System.Drawing.Point(334, 0);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(28, 32);
             this.linkLabel2.TabIndex = 13;
@@ -72,7 +72,7 @@ namespace FrmPetShopUI
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel1.Image = ((System.Drawing.Image)(resources.GetObject("linkLabel1.Image")));
             this.linkLabel1.LinkColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Location = new System.Drawing.Point(372, -2);
+            this.linkLabel1.Location = new System.Drawing.Point(357, -2);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(28, 32);
             this.linkLabel1.TabIndex = 12;
@@ -82,7 +82,7 @@ namespace FrmPetShopUI
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(52, 82);
+            this.button2.Location = new System.Drawing.Point(37, 82);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(340, 23);
             this.button2.TabIndex = 14;
@@ -92,30 +92,32 @@ namespace FrmPetShopUI
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(52, 122);
+            this.button3.Location = new System.Drawing.Point(37, 122);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(340, 23);
             this.button3.TabIndex = 15;
-            this.button3.Text = "ABM Usuarios Aplicacion";
+            this.button3.Text = "Informe de ventas";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button13
             // 
             this.button13.FlatAppearance.BorderSize = 0;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
-            this.button13.Location = new System.Drawing.Point(325, 196);
+            this.button13.Location = new System.Drawing.Point(325, 165);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(52, 35);
             this.button13.TabIndex = 19;
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // FrmConfiguracionEInformes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(418, 272);
+            this.ClientSize = new System.Drawing.Size(410, 211);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);

@@ -69,13 +69,9 @@ namespace Frm_Petshop_UI
         private void button1_Click(object sender, EventArgs e)
         {
            
-
-            Persona auxPersona = Tienda.LogIn(txtUsuario.Text, txtClave.Text);
-
             try
             {
-
-
+                Persona auxPersona = Tienda.LogIn(txtUsuario.Text, txtClave.Text);
                 if (auxPersona != null)
                 {
 

@@ -4,13 +4,13 @@ namespace Entidades
 {
     public static class Tienda
     {
-        public static List<Empleado> empleados;
-        public static List<Producto> ProductosDisponibles;
-        public static List<Producto> stock;
-        public static List<Producto> catalogo;
-        public static List<Producto> compraActualDelClienteSeleccionado;
-        public static List<Cliente> clientes;
-        public static float saldoTienda;
+        private static List<Empleado> empleados;
+        private static List<Producto> ProductosDisponibles;
+        private static List<Producto> stock;
+        private static List<Producto> catalogo;
+        private static List<Producto> compraActualDelClienteSeleccionado;
+        private static List<Cliente> clientes;
+        private static float saldoTienda;
 
 
         static Tienda()
@@ -53,6 +53,15 @@ namespace Entidades
             get { return compraActualDelClienteSeleccionado; }
 
         }
+
+        public static float SaldoTienda
+        {
+            get { return saldoTienda; }
+
+        }
+
+
+
 
 
         public static bool CargarEmpleados(Empleado p)
@@ -304,20 +313,24 @@ namespace Entidades
                         return auxEmpleado;
 
                     }
-
                 }
             }
-            UsuarioInvalidoException userPassInvalido = new UsuarioInvalidoException();
-            throw userPassInvalido;
+            else
+            {
+                UsuarioInvalidoException ex = new UsuarioInvalidoException();
+                throw ex;
+            }
+            return null;
+          
         }
 
     
         public static Producto BuscarProductoPorId(int id)
         {
-            for (int i = 0; i < Tienda.Stock.Count; i++)
+            for (int i = 0; i < Tienda.ProductosDisponibles.Count; i++)
             {
-                if (id == Tienda.Stock[i].Id)
-                    return Tienda.Stock[i];
+                if (id == Tienda.ProductosDisponibles[i].Id)
+                    return Tienda.ProductosDisponibles[i];
             }
             return null;
         }
@@ -327,28 +340,28 @@ namespace Entidades
             List<Producto> listaAux = new List<Producto>();
             for (int i = 0; i < Tienda.ProductosDisponibles.Count; i++)
             {
-                if (Tienda.Stock[i].Nombre.ToString().Trim().ToLower() == aux)
+                if (Tienda.stock[i].Nombre.ToString().Trim().ToLower() == aux)
                 {
-                    listaAux.Add(Tienda.Stock[i]);
+                    listaAux.Add(Tienda.stock[i]);
                 }
-                if (Tienda.Stock[i].Marca.ToString().Trim().ToLower() == aux)
+                if (Tienda.stock[i].Marca.ToString().Trim().ToLower() == aux)
                 {
-                    listaAux.Add(Tienda.Stock[i]);
+                    listaAux.Add(Tienda.stock[i]);
 
                 }
-                if (aux == Tienda.Stock[i].Animal.ToString().Trim().ToLower())
+                if (aux == Tienda.stock[i].Animal.ToString().Trim().ToLower())
                 {
-                    listaAux.Add(Tienda.Stock[i]);
+                    listaAux.Add(Tienda.stock[i]);
                 }
             }
             return listaAux;
         }
         public static Cliente BuscarClientePorId(int id)
         {
-            for (int i = 0; i < Tienda.Clientes.Count; i++)
+            for (int i = 0; i < Tienda.clientes.Count; i++)
             {
-                if (id == Tienda.Clientes[i].Id)
-                    return Tienda.Clientes[i];
+                if (id == Tienda.clientes[i].Id)
+                    return Tienda.clientes[i];
 
             }
             return null;
@@ -356,10 +369,10 @@ namespace Entidades
 
         public static Empleado BuscarEmpleadoPorId(int id)
         {
-            for (int i = 0; i < Tienda.Empleados.Count; i++)
+            for (int i = 0; i < Tienda.empleados.Count; i++)
             {
-                if (id == Tienda.Empleados[i].Id)
-                    return Tienda.Empleados[i];
+                if (id == Tienda.empleados[i].Id)
+                    return Tienda.empleados[i];
 
             }
             return null;

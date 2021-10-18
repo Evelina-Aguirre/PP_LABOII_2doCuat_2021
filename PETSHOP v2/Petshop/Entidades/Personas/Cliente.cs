@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Entidades
 {
@@ -59,6 +60,18 @@ namespace Entidades
             get
             {
                 return this.carrito;
+            }
+            set
+            {
+                try
+                {
+                    this.Carrito = value;
+                }
+                catch(StackOverflowException ex)
+                {
+                    this.Carrito = null;
+                }
+
             }
         }
 

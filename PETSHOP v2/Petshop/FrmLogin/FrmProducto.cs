@@ -87,7 +87,7 @@ namespace FrmProducto
             {
                 Producto auxProducto = new Producto();
                 auxProducto = Tienda.BuscarProductoPorId(Convert.ToInt32(dgProductos.CurrentRow.Cells[4].Value));
-                //Controls.Add(this.dgCarrito);
+                
                 dgCarrito.ColumnCount = 5;
                 this.dgCarrito.Columns[0].Name = "Nombre";
                 this.dgCarrito.Columns[1].Name = "Marca";
