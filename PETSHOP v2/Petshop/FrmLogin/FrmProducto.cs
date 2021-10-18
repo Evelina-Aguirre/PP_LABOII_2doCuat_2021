@@ -59,52 +59,7 @@ namespace FrmProducto
             }
             dgProductos.DataSource = auxProductos;
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void btnHigieneEstetica_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void btnAccesorios_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnJuguetes_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnHogarCamas_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void btnPaseoViaje_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnTerrariosTortugueros_Click(object sender, EventArgs e)
-        {
-
-        }
+           
 
         private void Frm_Producto_MouseDown(object sender, MouseEventArgs e)
         {
@@ -161,10 +116,6 @@ namespace FrmProducto
          
         }
 
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void button14_Click(object sender, EventArgs e)
         {
@@ -188,10 +139,6 @@ namespace FrmProducto
             txtBuscat.Text = string.Empty;
         }
 
-        private void lblDescricion_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void dgProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

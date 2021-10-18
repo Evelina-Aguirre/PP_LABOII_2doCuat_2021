@@ -20,7 +20,7 @@ namespace Frm_Petshop_UI
         
         int m, mx, my;
         private Producto listaCarrito;
-
+        
         public Frm_Emplead_()
         {
             InitializeComponent();
@@ -37,15 +37,17 @@ namespace Frm_Petshop_UI
             {
                 auxCliente = Tienda.Clientes[i];
 
-                dgClientesActuales.ColumnCount = 5;
+                dgClientesActuales.ColumnCount = 7;
                 this.dgClientesActuales.Columns[0].Name = "Nombre";
                 this.dgClientesActuales.Columns[1].Name = "Apellido";
                 this.dgClientesActuales.Columns[2].Name = "Dni";
                 this.dgClientesActuales.Columns[3].Name = "Saldo";
                 this.dgClientesActuales.Columns[4].Name = "ID Cliente";
+                this.dgClientesActuales.Columns[5].Name = "Dirección";
+                this.dgClientesActuales.Columns[6].Name = "Distancia";
 
 
-                dgClientesActuales.Rows.Add(auxCliente.Nombre, auxCliente.Apellido, auxCliente.Dni, auxCliente.Saldo, auxCliente.Id);
+                dgClientesActuales.Rows.Add(auxCliente.Nombre, auxCliente.Apellido, auxCliente.Dni, auxCliente.Saldo, auxCliente.Id, auxCliente.Direccion, auxCliente.Distancia);
 
             }
 
@@ -168,7 +170,12 @@ namespace Frm_Petshop_UI
         private void button3_Click(object sender, EventArgs e)
         {
                 Producto auxProducto = new Producto();
+                Cliente auxCliente = new Cliente("","",0);
+
+                auxCliente = Tienda.BuscarClientePorId(Convert.ToInt32(lblIdCliente.Text));
+
                 dgCarritoFrmPriuncipal.Rows.Clear();
+
                 for (int i = 0; i < Tienda.CompraActualDelClienteSeleccionado.Count; i++)
                 {
                     auxProducto = Tienda.CompraActualDelClienteSeleccionado[i];
@@ -185,6 +192,7 @@ namespace Frm_Petshop_UI
 
                 }
             lblTotalCompra.Text = Tienda.SumarPrecioArticulosAgregados(Tienda.CompraActualDelClienteSeleccionado).ToString();
+            lblCostoDeEnvio.Text = Envio.CalcularFormadeEnvio(auxCliente, Tienda.CompraActualDelClienteSeleccionado).ToString();
 
         }
 
@@ -193,6 +201,7 @@ namespace Frm_Petshop_UI
             int auxClienteId = 0;
             int saldo = 0;
             float total = 0;
+            float totalConEnvio = 0;
 
             if (string.IsNullOrEmpty(lblNombreCliente.Text.ToString()))
             {
@@ -206,8 +215,9 @@ namespace Frm_Petshop_UI
                     auxClienteId = Convert.ToInt32(lblIdCliente.Text);
                     saldo = Convert.ToInt32(lblSaldo.Text);
                     total = Tienda.SumarPrecioArticulosAgregados(Tienda.CompraActualDelClienteSeleccionado);
+                    totalConEnvio = Convert.ToInt32(lblTotalCompra) + Convert.ToInt32(lblCostoDeEnvio);
 
-                    if (total <= saldo)
+                    if (totalConEnvio <= saldo)
                     {
                         float aux;
 
@@ -215,7 +225,7 @@ namespace Frm_Petshop_UI
                         {
                             if (Tienda.Clientes[i].Id == auxClienteId)
                             {
-                                aux = Tienda.Clientes[i].Saldo - total;
+                                aux = Tienda.Clientes[i].Saldo - totalConEnvio;
                                 Tienda.Clientes[i].Saldo = aux;
                                 lblSaldo.Text = Tienda.Clientes[i].Saldo.ToString();
                                 break;
@@ -286,9 +296,9 @@ namespace Frm_Petshop_UI
   
         }
 
-        private void Frm_Emplead__FormClosing(object sender, FormClosingEventArgs e)
+        private void btnEditarCliente_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Frm_Emplead__MouseUp(object sender, MouseEventArgs e)

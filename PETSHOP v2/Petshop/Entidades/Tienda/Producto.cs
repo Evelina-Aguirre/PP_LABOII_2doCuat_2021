@@ -57,7 +57,7 @@ namespace Entidades
 
         public Producto()
         {
-            cantidad = 0;
+            cantidad = 1;
         }
 
         public Producto(string nombre, string marca, float precio, EAnimal animal, ECategoria categoria, EMedida medida,string descripcion):this()

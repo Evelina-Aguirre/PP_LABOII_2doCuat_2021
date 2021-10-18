@@ -103,11 +103,11 @@ namespace Entidades
             Producto p1 = new Producto("Alimento ", "Purina", 1500, Producto.EAnimal.Gato, Producto.ECategoria.Alimentos, Producto.EMedida.Kilos,
                 "Alimento rico en proteína animal de alto valor biológico, contiene minerales como calcio, fósforo, potasio y hierro, vitaminas A, D y E, fibras y ácidos grasos esenciales." +
                 "Se puede almacenar por mucho más tiempo sin que se deteriore, y evita la aparición de hongos o bacterias. Además, este tipo de alimento ayuda a eliminar el sarro y a retrasar " +
-                "la formación de la placa dental con el proceso de masticación y trituración.");
+                "la formación de la placa dental con el proceso de masticación y trituración.",15);
             Producto p2 = new Producto("Alimento ", "CatChow", 1200, Producto.EAnimal.Gato, Producto.ECategoria.Alimentos, Producto.EMedida.Kilos,
-                "Alimento rico en proteína animal de alto valor biológico, contiene minerales como calcio, fósforo, potasio y hierro, vitaminas A, D y E, fibras y ácidos grasos esenciales.");
+                "Alimento rico en proteína animal de alto valor biológico, contiene minerales como calcio, fósforo, potasio y hierro, vitaminas A, D y E, fibras y ácidos grasos esenciales.",2);
             Producto p3 = new Producto("Alimento", "Agility", 1100, Producto.EAnimal.Gato, Producto.ECategoria.Alimentos, Producto.EMedida.Kilos,
-                "Alimento rico en proteína animal de alto valor biológico, contiene minerales como calcio, fósforo, potasio y hierro, vitaminas A, D y E, fibras y ácidos grasos esenciales.");
+                "Alimento rico en proteína animal de alto valor biológico, contiene minerales como calcio, fósforo, potasio y hierro, vitaminas A, D y E, fibras y ácidos grasos esenciales.",15);
             Producto p4 = new Producto("Comedero", "Generico", 524, Producto.EAnimal.Gato, Producto.ECategoria.BebederosYComederos, Producto.EMedida.Unidades, "");
             Producto p5 = new Producto("Chaleco Térmico", "Generico", 524, Producto.EAnimal.Gato, Producto.ECategoria.Accesorios, Producto.EMedida.Unidades, "");
             Producto p6 = new Producto("Pretal", "Generico", 524, Producto.EAnimal.Gato, Producto.ECategoria.Accesorios, Producto.EMedida.Unidades, "");
@@ -245,11 +245,11 @@ namespace Entidades
             prodc1.Add(p3);
 
 
-            Cliente c1 = new Cliente("Marta", "Mendoza", 33860614, 20000, prodc1);
+            Cliente c1 = new Cliente("Marta", "Mendoza", 33860614, 20000, prodc1,"Av. Corriente 2025",2);
 
-            Cliente c3 = new Cliente("Franco", "Morla", 7241432, 20000, prodc1);
+            Cliente c3 = new Cliente("Franco", "Morla", 7241432, 20000, prodc1,"Av. San Martin 1280",1);
 
-            Cliente c4 = new Cliente("Lisa", "Prado", 12111524, 20000,prodc1);
+            Cliente c4 = new Cliente("Lisa", "Prado", 12111524, 20000,prodc1,"Pedraza 327",3);
 
             clientes.Add(c1);
             clientes.Add(c3);

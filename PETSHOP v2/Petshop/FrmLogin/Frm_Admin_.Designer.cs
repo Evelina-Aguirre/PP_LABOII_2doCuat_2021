@@ -29,7 +29,6 @@ namespace FrmPetShopUI
         /// </summary>
         private void InitializeComponent()
         {
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRemoverProducto
@@ -67,7 +66,7 @@ namespace FrmPetShopUI
             // 
             // button3
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
+            this.btnActualizarListaCarrito.FlatAppearance.BorderSize = 0;
             // 
             // button4
             // 
@@ -90,7 +89,6 @@ namespace FrmPetShopUI
             this.Name = "Frm_Admin_";
             this.Text = "Frm_Admin_";
             this.Load += new System.EventHandler(this.Frm_Admin__Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

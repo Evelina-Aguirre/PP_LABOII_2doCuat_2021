@@ -104,5 +104,26 @@ namespace FrmPetShopUI
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+
+        private void lklblBucar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            List<Producto> listaAux = new List<Producto>();
+
+            
+            listaAux = Tienda.BuscarProducto(txtBuscar.Text.ToString().Trim().ToLower());
+            
+            if (int.TryParse(txtBuscar.Text, out int id))
+            {
+                listaAux.Add(Tienda.BuscarProductoPorId(id));
+                dgProductosDisponibles.DataSource = listaAux;
+            }
+            dgProductosDisponibles.DataSource = listaAux;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dgProductosDisponibles.DataSource = Tienda.ProductosDisponibles;
+        }
     }
 }

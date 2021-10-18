@@ -6,6 +6,8 @@ namespace Entidades
     {
         private List<Producto> carrito;
         private float saldo;
+        private string direccion;
+        private int distancia;
 
         public Cliente(string nombre, string apellido, int dni) : base(nombre, apellido, dni)
         {
@@ -21,6 +23,13 @@ namespace Entidades
             carrito = new List<Producto>();
             this.carrito = carrito;
             
+        }
+
+        public Cliente(string nombre, string apellido, int dni, float saldo, List<Producto> carrito, string direccion,int distancia) : this(nombre, apellido, dni, saldo)
+        {
+            this.distancia = distancia;
+            this.direccion = direccion;
+
         }
 
 
@@ -63,6 +72,23 @@ namespace Entidades
             {
                 this.saldo = value;
             }
+        }
+
+        public string Direccion
+        {
+            get
+            {
+                return this.direccion;
+            }
+
+        }
+        public float Distancia
+        {
+            get
+            {
+                return this.distancia;
+            }
+           
         }
 
         /// <summary>

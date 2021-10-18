@@ -7,6 +7,9 @@
     <Compile Update="FrmConfiguracionEInformes.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmEditarSaldoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmOlvidoClave_PruebaApp.cs">
       <SubType>Form</SubType>
     </Compile>

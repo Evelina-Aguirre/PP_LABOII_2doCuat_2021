@@ -65,17 +65,18 @@ namespace Frm_Petshop_UI
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnActualizarListaCarrito = new System.Windows.Forms.Button();
             this.btnRemoverProducto = new System.Windows.Forms.Button();
             this.btnConfiguracion = new System.Windows.Forms.Button();
             this.lblMsjErrorLogAdmin = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button4 = new System.Windows.Forms.Button();
             this.lblErrorNuevoCliente = new System.Windows.Forms.Label();
+            this.btnEditarCliente = new System.Windows.Forms.Button();
+            this.lblCostoDeEnvio = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgCarritoFrmPriuncipal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientesActuales)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPerros
@@ -199,9 +200,10 @@ namespace Frm_Petshop_UI
             // lblSaldo
             // 
             this.lblSaldo.AutoSize = true;
+            this.lblSaldo.BackColor = System.Drawing.Color.Transparent;
             this.lblSaldo.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblSaldo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblSaldo.Location = new System.Drawing.Point(950, 279);
+            this.lblSaldo.Location = new System.Drawing.Point(905, 281);
             this.lblSaldo.Name = "lblSaldo";
             this.lblSaldo.Size = new System.Drawing.Size(0, 15);
             this.lblSaldo.TabIndex = 44;
@@ -209,9 +211,10 @@ namespace Frm_Petshop_UI
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label9.Location = new System.Drawing.Point(884, 278);
+            this.label9.Location = new System.Drawing.Point(839, 280);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(59, 15);
             this.label9.TabIndex = 43;
@@ -221,7 +224,7 @@ namespace Frm_Petshop_UI
             // 
             this.lblTotalCompra.AutoSize = true;
             this.lblTotalCompra.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTotalCompra.Location = new System.Drawing.Point(543, 499);
+            this.lblTotalCompra.Location = new System.Drawing.Point(549, 507);
             this.lblTotalCompra.Name = "lblTotalCompra";
             this.lblTotalCompra.Size = new System.Drawing.Size(0, 15);
             this.lblTotalCompra.TabIndex = 42;
@@ -230,7 +233,7 @@ namespace Frm_Petshop_UI
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label12.Location = new System.Drawing.Point(505, 499);
+            this.label12.Location = new System.Drawing.Point(511, 507);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(37, 15);
             this.label12.TabIndex = 41;
@@ -294,6 +297,7 @@ namespace Frm_Petshop_UI
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label6.Location = new System.Drawing.Point(511, 279);
@@ -305,6 +309,7 @@ namespace Frm_Petshop_UI
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label5.Location = new System.Drawing.Point(510, 258);
@@ -316,6 +321,7 @@ namespace Frm_Petshop_UI
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label4.Location = new System.Drawing.Point(510, 238);
@@ -327,6 +333,7 @@ namespace Frm_Petshop_UI
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label3.Location = new System.Drawing.Point(510, 217);
@@ -338,6 +345,7 @@ namespace Frm_Petshop_UI
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Location = new System.Drawing.Point(509, 191);
@@ -378,6 +386,7 @@ namespace Frm_Petshop_UI
             // lblIdCliente
             // 
             this.lblIdCliente.AutoSize = true;
+            this.lblIdCliente.BackColor = System.Drawing.Color.Transparent;
             this.lblIdCliente.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblIdCliente.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblIdCliente.Location = new System.Drawing.Point(613, 281);
@@ -388,6 +397,7 @@ namespace Frm_Petshop_UI
             // lblDniCliente
             // 
             this.lblDniCliente.AutoSize = true;
+            this.lblDniCliente.BackColor = System.Drawing.Color.Transparent;
             this.lblDniCliente.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblDniCliente.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblDniCliente.Location = new System.Drawing.Point(613, 260);
@@ -398,6 +408,7 @@ namespace Frm_Petshop_UI
             // lblApellidoCiente
             // 
             this.lblApellidoCiente.AutoSize = true;
+            this.lblApellidoCiente.BackColor = System.Drawing.Color.Transparent;
             this.lblApellidoCiente.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblApellidoCiente.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblApellidoCiente.Location = new System.Drawing.Point(613, 240);
@@ -408,6 +419,7 @@ namespace Frm_Petshop_UI
             // lblNombreCliente
             // 
             this.lblNombreCliente.AutoSize = true;
+            this.lblNombreCliente.BackColor = System.Drawing.Color.Transparent;
             this.lblNombreCliente.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblNombreCliente.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblNombreCliente.Location = new System.Drawing.Point(613, 219);
@@ -469,26 +481,18 @@ namespace Frm_Petshop_UI
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pictureBox1
+            // btnActualizarListaCarrito
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(1079, 180);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(108, 132);
-            this.pictureBox1.TabIndex = 58;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(1143, 336);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(44, 36);
-            this.button3.TabIndex = 59;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnActualizarListaCarrito.BackColor = System.Drawing.Color.Transparent;
+            this.btnActualizarListaCarrito.FlatAppearance.BorderSize = 0;
+            this.btnActualizarListaCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizarListaCarrito.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizarListaCarrito.Image")));
+            this.btnActualizarListaCarrito.Location = new System.Drawing.Point(1143, 336);
+            this.btnActualizarListaCarrito.Name = "btnActualizarListaCarrito";
+            this.btnActualizarListaCarrito.Size = new System.Drawing.Size(44, 36);
+            this.btnActualizarListaCarrito.TabIndex = 59;
+            this.btnActualizarListaCarrito.UseVisualStyleBackColor = false;
+            this.btnActualizarListaCarrito.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnRemoverProducto
             // 
@@ -549,11 +553,44 @@ namespace Frm_Petshop_UI
             // lblErrorNuevoCliente
             // 
             this.lblErrorNuevoCliente.AutoSize = true;
+            this.lblErrorNuevoCliente.BackColor = System.Drawing.Color.Transparent;
             this.lblErrorNuevoCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblErrorNuevoCliente.Location = new System.Drawing.Point(884, 157);
             this.lblErrorNuevoCliente.Name = "lblErrorNuevoCliente";
             this.lblErrorNuevoCliente.Size = new System.Drawing.Size(0, 15);
             this.lblErrorNuevoCliente.TabIndex = 64;
+            // 
+            // btnEditarCliente
+            // 
+            this.btnEditarCliente.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditarCliente.FlatAppearance.BorderSize = 0;
+            this.btnEditarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarCliente.Image")));
+            this.btnEditarCliente.Location = new System.Drawing.Point(1019, 261);
+            this.btnEditarCliente.Name = "btnEditarCliente";
+            this.btnEditarCliente.Size = new System.Drawing.Size(37, 35);
+            this.btnEditarCliente.TabIndex = 65;
+            this.btnEditarCliente.UseVisualStyleBackColor = false;
+            this.btnEditarCliente.Click += new System.EventHandler(this.btnEditarCliente_Click);
+            // 
+            // lblCostoDeEnvio
+            // 
+            this.lblCostoDeEnvio.AutoSize = true;
+            this.lblCostoDeEnvio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblCostoDeEnvio.Location = new System.Drawing.Point(613, 480);
+            this.lblCostoDeEnvio.Name = "lblCostoDeEnvio";
+            this.lblCostoDeEnvio.Size = new System.Drawing.Size(0, 15);
+            this.lblCostoDeEnvio.TabIndex = 67;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label10.Location = new System.Drawing.Point(511, 480);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(89, 15);
+            this.label10.TabIndex = 66;
+            this.label10.Text = "Costo de envio:";
             // 
             // Frm_Emplead_
             // 
@@ -562,13 +599,15 @@ namespace Frm_Petshop_UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(1248, 585);
+            this.Controls.Add(this.lblCostoDeEnvio);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.btnEditarCliente);
             this.Controls.Add(this.lblErrorNuevoCliente);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.lblMsjErrorLogAdmin);
             this.Controls.Add(this.btnConfiguracion);
             this.Controls.Add(this.btnRemoverProducto);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnActualizarListaCarrito);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
@@ -607,14 +646,12 @@ namespace Frm_Petshop_UI
             this.Name = "Frm_Emplead_";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTienda";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frm_Emplead__FormClosing);
             this.Load += new System.EventHandler(this.Frm_Emplead__Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Frm_Emplead__MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Frm_Emplead__MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Frm_Emplead__MouseUp);
             ((System.ComponentModel.ISupportInitialize)(this.dgCarritoFrmPriuncipal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientesActuales)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -657,13 +694,15 @@ namespace Frm_Petshop_UI
         public System.Windows.Forms.LinkLabel linkLabel1;
         public System.Windows.Forms.LinkLabel linkLabel2;
         public System.Windows.Forms.Button button1;
-        public System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.Button button3;
+        public System.Windows.Forms.Button btnActualizarListaCarrito;
         private System.Windows.Forms.Timer timer1;
         public System.Windows.Forms.Button button4;
         public System.Windows.Forms.Label lblMsjErrorLogAdmin;
         public System.Windows.Forms.Button btnConfiguracion;
         private System.Windows.Forms.Label lblErrorNuevoCliente;
+        private System.Windows.Forms.Button btnEditarCliente;
+        public System.Windows.Forms.Label lblCostoDeEnvio;
+        public System.Windows.Forms.Label label10;
     }
 }
 

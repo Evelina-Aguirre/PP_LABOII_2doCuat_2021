@@ -36,7 +36,7 @@ namespace FrmPetShopUI
             this.btnAgregarACarro = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTotalCompra = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lklblBucar = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -45,6 +45,7 @@ namespace FrmPetShopUI
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.lblSaldoDisponibleTienda = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgProductosDisponibles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgCarritoAdquirirStock)).BeginInit();
             this.SuspendLayout();
@@ -109,12 +110,12 @@ namespace FrmPetShopUI
             this.lblTotalCompra.Size = new System.Drawing.Size(0, 15);
             this.lblTotalCompra.TabIndex = 5;
             // 
-            // textBox1
+            // txtBuscar
             // 
-            this.textBox1.Location = new System.Drawing.Point(32, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(686, 23);
-            this.textBox1.TabIndex = 6;
+            this.txtBuscar.Location = new System.Drawing.Point(32, 64);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(686, 23);
+            this.txtBuscar.TabIndex = 6;
             // 
             // lklblBucar
             // 
@@ -130,6 +131,7 @@ namespace FrmPetShopUI
             this.lklblBucar.TabIndex = 7;
             this.lklblBucar.TabStop = true;
             this.lklblBucar.Text = "     ";
+            this.lklblBucar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklblBucar_LinkClicked);
             // 
             // label3
             // 
@@ -212,12 +214,23 @@ namespace FrmPetShopUI
             this.lblSaldoDisponibleTienda.Size = new System.Drawing.Size(0, 15);
             this.lblSaldoDisponibleTienda.TabIndex = 14;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(32, 343);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(134, 23);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "Actualizar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // FrmRenovarSrockProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(798, 720);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.lblSaldoDisponibleTienda);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
@@ -226,7 +239,7 @@ namespace FrmPetShopUI
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lklblBucar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lblTotalCompra);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnAgregarACarro);
@@ -253,7 +266,7 @@ namespace FrmPetShopUI
         private System.Windows.Forms.Button btnAgregarACarro;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTotalCompra;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.LinkLabel lklblBucar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
@@ -262,5 +275,6 @@ namespace FrmPetShopUI
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblSaldoDisponibleTienda;
+        private System.Windows.Forms.Button button3;
     }
 }

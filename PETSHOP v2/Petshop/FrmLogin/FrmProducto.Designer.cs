@@ -73,7 +73,6 @@ namespace FrmProducto
             this.BtnComida.Size = new System.Drawing.Size(155, 152);
             this.BtnComida.TabIndex = 0;
             this.BtnComida.UseVisualStyleBackColor = true;
-            this.BtnComida.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnComederosBebederos
             // 
@@ -85,7 +84,6 @@ namespace FrmProducto
             this.btnComederosBebederos.Size = new System.Drawing.Size(165, 152);
             this.btnComederosBebederos.TabIndex = 1;
             this.btnComederosBebederos.UseVisualStyleBackColor = true;
-            this.btnComederosBebederos.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnHigieneEstetica
             // 
@@ -97,7 +95,6 @@ namespace FrmProducto
             this.btnHigieneEstetica.Size = new System.Drawing.Size(150, 152);
             this.btnHigieneEstetica.TabIndex = 2;
             this.btnHigieneEstetica.UseVisualStyleBackColor = true;
-            this.btnHigieneEstetica.Click += new System.EventHandler(this.btnHigieneEstetica_Click);
             // 
             // btnPaseoViaje
             // 
@@ -109,7 +106,6 @@ namespace FrmProducto
             this.btnPaseoViaje.Size = new System.Drawing.Size(150, 152);
             this.btnPaseoViaje.TabIndex = 5;
             this.btnPaseoViaje.UseVisualStyleBackColor = true;
-            this.btnPaseoViaje.Click += new System.EventHandler(this.btnPaseoViaje_Click);
             // 
             // btnHogarCamas
             // 
@@ -121,7 +117,6 @@ namespace FrmProducto
             this.btnHogarCamas.Size = new System.Drawing.Size(168, 152);
             this.btnHogarCamas.TabIndex = 4;
             this.btnHogarCamas.UseVisualStyleBackColor = true;
-            this.btnHogarCamas.Click += new System.EventHandler(this.btnHogarCamas_Click);
             // 
             // btnJuguetes
             // 
@@ -133,7 +128,6 @@ namespace FrmProducto
             this.btnJuguetes.Size = new System.Drawing.Size(155, 152);
             this.btnJuguetes.TabIndex = 3;
             this.btnJuguetes.UseVisualStyleBackColor = true;
-            this.btnJuguetes.Click += new System.EventHandler(this.btnJuguetes_Click);
             // 
             // btnAccesorios
             // 
@@ -145,7 +139,6 @@ namespace FrmProducto
             this.btnAccesorios.Size = new System.Drawing.Size(150, 152);
             this.btnAccesorios.TabIndex = 6;
             this.btnAccesorios.UseVisualStyleBackColor = true;
-            this.btnAccesorios.Click += new System.EventHandler(this.btnAccesorios_Click);
             // 
             // txtBuscat
             // 
@@ -155,7 +148,6 @@ namespace FrmProducto
             this.txtBuscat.TabIndex = 7;
             this.txtBuscat.Text = "Buscar";
             this.txtBuscat.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtBuscat_MouseClick);
-            this.txtBuscat.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // dgProductos
             // 
@@ -217,7 +209,6 @@ namespace FrmProducto
             this.dgCarrito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgCarrito.Size = new System.Drawing.Size(522, 151);
             this.dgCarrito.TabIndex = 13;
-            this.dgCarrito.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // label2
             // 
@@ -249,7 +240,6 @@ namespace FrmProducto
             this.btnTerrariosTortugueros.Size = new System.Drawing.Size(150, 152);
             this.btnTerrariosTortugueros.TabIndex = 17;
             this.btnTerrariosTortugueros.UseVisualStyleBackColor = true;
-            this.btnTerrariosTortugueros.Click += new System.EventHandler(this.btnTerrariosTortugueros_Click);
             // 
             // button13
             // 
@@ -322,7 +312,6 @@ namespace FrmProducto
             this.lblDescricion.Name = "lblDescricion";
             this.lblDescricion.Size = new System.Drawing.Size(623, 86);
             this.lblDescricion.TabIndex = 24;
-            this.lblDescricion.Click += new System.EventHandler(this.lblDescricion_Click);
             // 
             // label5
             // 
