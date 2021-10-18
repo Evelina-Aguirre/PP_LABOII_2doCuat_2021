@@ -36,10 +36,6 @@ namespace FrmPetShopUI
             // 
             this.btnRemoverProducto.FlatAppearance.BorderSize = 0;
             // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            // 
             // btnPerros
             // 
             this.btnPerros.FlatAppearance.BorderSize = 0;
@@ -72,6 +68,19 @@ namespace FrmPetShopUI
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
+            // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderSize = 0;
+            // 
+            // lblMsjErrorLogAdmin
+            // 
+            this.lblMsjErrorLogAdmin.Location = new System.Drawing.Point(57, 554);
+            // 
+            // btnConfiguracion
+            // 
+            this.btnConfiguracion.FlatAppearance.BorderSize = 0;
+            this.btnConfiguracion.Click += new System.EventHandler(this.btnConfiguracion_Click);
             // 
             // Frm_Admin_
             // 

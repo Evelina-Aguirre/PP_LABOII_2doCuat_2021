@@ -63,3 +63,4 @@ C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_202
 C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmPetShopUI.Frm_Admin_.resources
 C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmPetShopUI.FrmCambiarPerfil.resources
 C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\Frm_Petshop_UI.Frm_Login_.resources
+C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\FrmLogin\obj\Debug\net5.0-windows\FrmPetShopUI.FrmConfiguracionEInformes.resources

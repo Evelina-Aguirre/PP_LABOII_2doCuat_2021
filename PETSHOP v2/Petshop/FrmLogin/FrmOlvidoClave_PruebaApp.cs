@@ -49,7 +49,10 @@ namespace FrmPetShopUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Frm_Admin_ frmAdmin = new Frm_Admin_();
+            frmAdmin.Show();
+            this.Hide();
+            this.seCerroVentana = true;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -65,6 +68,14 @@ namespace FrmPetShopUI
         private void FrmOlvidoClave_PruebaApp_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Frm_Admin_ frmAdmin = new Frm_Admin_();
+            frmAdmin.Show();
+            this.Hide();
+            this.seCerroVentana = true;
         }
 
         public FrmOlvidoClave_PruebaApp()

@@ -27,7 +27,15 @@ namespace FrmPetShopUI
         private void btnNuevoCliente_Click(object sender, EventArgs e)
         {
             FrmCrearModificarCliente frmCargarNuevoCliente = new FrmCrearModificarCliente();
-            frmCargarNuevoCliente.Show();
+            frmCargarNuevoCliente.ShowDialog();
+            
+
+        }
+
+        private void btnConfiguracion_Click(object sender, EventArgs e)
+        {
+            FrmConfiguracionEInformes frmConfEInformes = new FrmConfiguracionEInformes();
+            frmConfEInformes.Show();
         }
     }
 }

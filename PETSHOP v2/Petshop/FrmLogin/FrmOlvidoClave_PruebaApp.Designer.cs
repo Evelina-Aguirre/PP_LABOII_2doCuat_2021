@@ -32,11 +32,11 @@ namespace FrmPetShopUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOlvidoClave_PruebaApp));
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnPerfilEmpleado = new System.Windows.Forms.Button();
+            this.btnPerfilEmplead_ = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnPerfilGato = new System.Windows.Forms.Button();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -63,16 +63,16 @@ namespace FrmPetShopUI
             this.label2.TabIndex = 7;
             this.label2.Text = "con nuestro service desk al 555-5555.";
             // 
-            // btnPerfilEmpleado
+            // btnPerfilEmplead_
             // 
-            this.btnPerfilEmpleado.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfilEmpleado.Image")));
-            this.btnPerfilEmpleado.Location = new System.Drawing.Point(20, 112);
-            this.btnPerfilEmpleado.Name = "btnPerfilEmpleado";
-            this.btnPerfilEmpleado.Size = new System.Drawing.Size(181, 213);
-            this.btnPerfilEmpleado.TabIndex = 9;
-            this.btnPerfilEmpleado.UseVisualStyleBackColor = true;
-            this.btnPerfilEmpleado.Click += new System.EventHandler(this.button1_Click);
-            this.btnPerfilEmpleado.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
+            this.btnPerfilEmplead_.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfilEmplead_.Image")));
+            this.btnPerfilEmplead_.Location = new System.Drawing.Point(20, 112);
+            this.btnPerfilEmplead_.Name = "btnPerfilEmplead_";
+            this.btnPerfilEmplead_.Size = new System.Drawing.Size(181, 213);
+            this.btnPerfilEmplead_.TabIndex = 9;
+            this.btnPerfilEmplead_.UseVisualStyleBackColor = true;
+            this.btnPerfilEmplead_.Click += new System.EventHandler(this.button1_Click);
+            this.btnPerfilEmplead_.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
             // 
             // label1
             // 
@@ -85,16 +85,6 @@ namespace FrmPetShopUI
             this.label1.Size = new System.Drawing.Size(338, 15);
             this.label1.TabIndex = 10;
             this.label1.Text = " Para restaurar su usuario o contraseña por favor comuniquese ";
-            // 
-            // btnPerfilGato
-            // 
-            this.btnPerfilGato.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfilGato.Image")));
-            this.btnPerfilGato.Location = new System.Drawing.Point(223, 112);
-            this.btnPerfilGato.Name = "btnPerfilGato";
-            this.btnPerfilGato.Size = new System.Drawing.Size(181, 213);
-            this.btnPerfilGato.TabIndex = 11;
-            this.btnPerfilGato.UseVisualStyleBackColor = true;
-            this.btnPerfilGato.Click += new System.EventHandler(this.button2_Click);
             // 
             // linkLabel2
             // 
@@ -124,17 +114,27 @@ namespace FrmPetShopUI
             this.linkLabel1.Text = "      ";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // button1
+            // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(223, 112);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(181, 213);
+            this.button1.TabIndex = 59;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // FrmOlvidoClave_PruebaApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(427, 347);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.btnPerfilGato);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnPerfilEmpleado);
+            this.Controls.Add(this.btnPerfilEmplead_);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -154,10 +154,10 @@ namespace FrmPetShopUI
 
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnPerfilEmpleado;
+        private System.Windows.Forms.Button btnPerfilEmplead_;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnPerfilGato;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button button1;
     }
 }

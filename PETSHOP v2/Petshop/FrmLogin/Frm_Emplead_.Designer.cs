@@ -68,10 +68,11 @@ namespace Frm_Petshop_UI
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.btnRemoverProducto = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnConfiguracion = new System.Windows.Forms.Button();
             this.lblMsjErrorLogAdmin = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button4 = new System.Windows.Forms.Button();
+            this.lblErrorNuevoCliente = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgCarritoFrmPriuncipal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientesActuales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -503,19 +504,19 @@ namespace Frm_Petshop_UI
             this.btnRemoverProducto.UseVisualStyleBackColor = true;
             this.btnRemoverProducto.Click += new System.EventHandler(this.btnAgregarACarrito_Click);
             // 
-            // button2
+            // btnConfiguracion
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(-8, 541);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(53, 44);
-            this.button2.TabIndex = 61;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnConfiguracion.BackColor = System.Drawing.Color.Transparent;
+            this.btnConfiguracion.FlatAppearance.BorderSize = 0;
+            this.btnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfiguracion.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnConfiguracion.Image = ((System.Drawing.Image)(resources.GetObject("btnConfiguracion.Image")));
+            this.btnConfiguracion.Location = new System.Drawing.Point(-8, 541);
+            this.btnConfiguracion.Name = "btnConfiguracion";
+            this.btnConfiguracion.Size = new System.Drawing.Size(53, 44);
+            this.btnConfiguracion.TabIndex = 61;
+            this.btnConfiguracion.UseVisualStyleBackColor = false;
+            this.btnConfiguracion.Click += new System.EventHandler(this.button2_Click);
             // 
             // lblMsjErrorLogAdmin
             // 
@@ -528,7 +529,7 @@ namespace Frm_Petshop_UI
             // 
             // timer1
             // 
-            this.timer1.Interval = 1500;
+            this.timer1.Interval = 1700;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // button4
@@ -545,6 +546,15 @@ namespace Frm_Petshop_UI
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // lblErrorNuevoCliente
+            // 
+            this.lblErrorNuevoCliente.AutoSize = true;
+            this.lblErrorNuevoCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblErrorNuevoCliente.Location = new System.Drawing.Point(884, 157);
+            this.lblErrorNuevoCliente.Name = "lblErrorNuevoCliente";
+            this.lblErrorNuevoCliente.Size = new System.Drawing.Size(0, 15);
+            this.lblErrorNuevoCliente.TabIndex = 64;
+            // 
             // Frm_Emplead_
             // 
             this.AcceptButton = this.lklblBuscarCliente;
@@ -552,9 +562,10 @@ namespace Frm_Petshop_UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(1248, 585);
+            this.Controls.Add(this.lblErrorNuevoCliente);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.lblMsjErrorLogAdmin);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnConfiguracion);
             this.Controls.Add(this.btnRemoverProducto);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox1);
@@ -648,9 +659,11 @@ namespace Frm_Petshop_UI
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label lblMsjErrorLogAdmin;
         private System.Windows.Forms.Timer timer1;
         public System.Windows.Forms.Button button4;
+        public System.Windows.Forms.Label lblMsjErrorLogAdmin;
+        public System.Windows.Forms.Button btnConfiguracion;
+        private System.Windows.Forms.Label lblErrorNuevoCliente;
     }
 }
 

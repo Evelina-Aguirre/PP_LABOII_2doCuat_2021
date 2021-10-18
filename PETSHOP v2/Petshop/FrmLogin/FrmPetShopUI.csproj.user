@@ -4,6 +4,9 @@
     <Compile Update="FrmCambiarPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmConfiguracionEInformes.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmOlvidoClave_PruebaApp.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -257,7 +257,7 @@ namespace Frm_Petshop_UI
 
         private void btnNuevoCliente_Click(object sender, EventArgs e)
         {
-            lblMsjErrorLogAdmin.Text = "Para cargar un nuevo cliente debe loguearse como Admin.";
+            lblErrorNuevoCliente.Text = "Para cargar un nuevo cliente debe loguearse como Admin.";
             timer1.Start();
         }
 
@@ -270,17 +270,16 @@ namespace Frm_Petshop_UI
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblMsjErrorLogAdmin.Text = String.Empty;
+            lblErrorNuevoCliente.Text = String.Empty;
             timer1.Stop();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            DialogResult respuesta= MessageBox.Show("¿Desea cambiar de usuario?", "Cambio Usuario",MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-            
-            if(respuesta == DialogResult.OK)
+            if(MessageBox.Show("¿Desea cambiar de usuario?", "Cambio Usuario",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 FrmCambiarPerfil frmCambiaPerfil = new FrmCambiarPerfil();
-                frmCambiaPerfil.ShowDialog();
+                frmCambiaPerfil.Show();
                 this.Hide();
             }
   
