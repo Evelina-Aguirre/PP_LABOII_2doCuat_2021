@@ -271,20 +271,20 @@ namespace Frm_Petshop_UI
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnInicioSesion;
-        private System.Windows.Forms.TextBox txtClave;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.LinkLabel lnklblOlvidasteClave;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel3;
-        private System.Windows.Forms.Label lblErrorMsj;
         private System.Windows.Forms.LinkLabel linkLabel4;
         public System.Windows.Forms.LinkLabel linkLabel1;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.PictureBox pictureBox3;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.TextBox txtClave;
+        public System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.TextBox txtUsuario;
+        public System.Windows.Forms.Label lblErrorMsj;
     }
 }
 

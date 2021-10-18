@@ -5,3 +5,12 @@ Pretal	Generico	ViajesYPaseo	1
 Pretal	Generico	ViajesYPaseo	1	
 Comida Seca Adulto	DogChow	Alimentos	1	
 Comida Seca Adulto	DogHola	Alimentos	1	
+Alimento 	Purina	Alimentos	1	
+Alimento 	Purina	Alimentos	1	
+Alimento 	Purina	Alimentos	1	
+Alimento 	Purina	Alimentos	1	
+Alimento 	Purina	Alimentos	1	
+Alimento 	Purina	Alimentos	1	
+Alimento 	Purina	Alimentos	1	
+Alimento 	Purina	Alimentos	1	
+Alimento 	Purina	Alimentos	1	

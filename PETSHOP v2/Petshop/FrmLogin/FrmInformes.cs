@@ -37,7 +37,7 @@ namespace FrmPetShopUI
                 this.dgInforme.Columns[7].Name = "Descripción";
                 this.dgInforme.Columns[8].Name = "Animal";
 
-                dgInforme.Rows.Add(auxProducto.Nombre, auxProducto.Marca, auxProducto.Categoria, 1, auxProducto.Precio);
+                dgInforme.Rows.Add(auxProducto.Nombre, auxProducto.Marca, auxProducto.Precio, auxProducto.Medida, auxProducto.Id, auxProducto.Cantidad,auxProducto.Categoria,auxProducto.Descripcion,auxProducto.Animal);
             }
             lblTotalVentas.Text = Tienda.SumarPrecioArticulosAgregados(Venta.ventasRealizadas).ToString();
             

@@ -74,11 +74,19 @@ namespace Frm_Petshop_UI
                 Persona auxPersona = Tienda.LogIn(txtUsuario.Text, txtClave.Text);
                 if (auxPersona != null)
                 {
+                    if (auxPersona is Empleado)
+                    {
+                        Frm_Emplead_ interfazEmpleado = new Frm_Emplead_();
+                        interfazEmpleado.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        Frm_Admin_ interfazAdmin = new Frm_Admin_();
+                        interfazAdmin.Show();
+                        this.Hide();
 
-                    Frm_Emplead_ interfazEmpleado = new Frm_Emplead_();
-                    interfazEmpleado.Show();
-
-                    this.Hide();
+                    }
                 }
             }
             catch (UsuarioInvalidoException ex)

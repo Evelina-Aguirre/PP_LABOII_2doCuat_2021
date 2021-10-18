@@ -72,8 +72,10 @@ namespace FrmPetShopUI
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Frm_Admin_ frmAdmin = new Frm_Admin_();
-            frmAdmin.Show();
+            Frm_Login_ frmLogin = new Frm_Login_();
+            frmLogin.txtUsuario.Text = "ian";
+            frmLogin.txtClave.Text = "ian123";
+            frmLogin.Show();
             this.Hide();
             this.seCerroVentana = true;
         }
@@ -85,8 +87,10 @@ namespace FrmPetShopUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Frm_Emplead_ frmempleado = new Frm_Emplead_();
-            frmempleado.Show();
+            Frm_Login_ frmLogin = new Frm_Login_();
+            frmLogin.txtUsuario.Text = "maria";
+            frmLogin.txtClave.Text = "maria123";
+            frmLogin.Show();
             this.Hide();
             this.seCerroVentana = true;
         }
