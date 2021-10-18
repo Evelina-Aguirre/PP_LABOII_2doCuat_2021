@@ -29,6 +29,7 @@ namespace FrmPetShopUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCargarNuevoUsuarioApp));
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtClave = new System.Windows.Forms.TextBox();
@@ -105,6 +106,7 @@ namespace FrmPetShopUI
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label6);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCargarNuevoUsuarioApp";
             this.Text = "FrmCargarNuevoUsuarioApp";
             this.Load += new System.EventHandler(this.FrmCargarNuevoUsuarioApp_Load);

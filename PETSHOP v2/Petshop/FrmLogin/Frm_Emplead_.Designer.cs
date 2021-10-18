@@ -654,6 +654,7 @@ namespace Frm_Petshop_UI
             this.Controls.Add(this.btnGatoa);
             this.Controls.Add(this.btnPerros);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_Emplead_";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTienda";

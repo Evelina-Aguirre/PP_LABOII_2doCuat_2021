@@ -416,6 +416,7 @@ namespace FrmProducto
             this.Controls.Add(this.btnComederosBebederos);
             this.Controls.Add(this.BtnComida);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_Producto_";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Perros";

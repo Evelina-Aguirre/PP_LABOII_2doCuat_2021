@@ -13,9 +13,6 @@
     <Compile Update="FrmConfiguracionEInformes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FrmEditarSaldoCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="FrmInformes.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -132,6 +132,7 @@ namespace FrmPetShopUI
             this.Controls.Add(this.dgInforme);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmInformes";
             this.Text = "FrmInformes";
             this.Load += new System.EventHandler(this.FrmInformes_Load);
