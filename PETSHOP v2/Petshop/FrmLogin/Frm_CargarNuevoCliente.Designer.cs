@@ -42,6 +42,7 @@ namespace FrmCargarNuevoCliente
             this.label2 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lblId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label5
@@ -169,12 +170,23 @@ namespace FrmCargarNuevoCliente
             this.linkLabel1.Text = "      ";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.ForeColor = System.Drawing.Color.Transparent;
+            this.lblId.Location = new System.Drawing.Point(21, 11);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(18, 15);
+            this.lblId.TabIndex = 67;
+            this.lblId.Text = "ID";
+            // 
             // FrmCrearModificarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(420, 278);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label2);
@@ -211,6 +223,7 @@ namespace FrmCargarNuevoCliente
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.LinkLabel linkLabel2;
         public System.Windows.Forms.LinkLabel linkLabel1;
+        public System.Windows.Forms.Label lblId;
     }
 }
 

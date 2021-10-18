@@ -36,6 +36,7 @@ namespace FrmPetShopUI
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
+            this.lblId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgEmpleadActuales)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,12 +48,13 @@ namespace FrmPetShopUI
             this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel2.Image = ((System.Drawing.Image)(resources.GetObject("linkLabel2.Image")));
             this.linkLabel2.LinkColor = System.Drawing.Color.Transparent;
-            this.linkLabel2.Location = new System.Drawing.Point(747, -8);
+            this.linkLabel2.Location = new System.Drawing.Point(644, -8);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(28, 32);
             this.linkLabel2.TabIndex = 15;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "  ";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // linkLabel1
             // 
@@ -62,25 +64,27 @@ namespace FrmPetShopUI
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel1.Image = ((System.Drawing.Image)(resources.GetObject("linkLabel1.Image")));
             this.linkLabel1.LinkColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Location = new System.Drawing.Point(770, -10);
+            this.linkLabel1.Location = new System.Drawing.Point(667, -10);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(28, 32);
             this.linkLabel1.TabIndex = 14;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "  ";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // dgEmpleadActuales
             // 
             this.dgEmpleadActuales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgEmpleadActuales.Location = new System.Drawing.Point(36, 32);
+            this.dgEmpleadActuales.Location = new System.Drawing.Point(12, 33);
             this.dgEmpleadActuales.Name = "dgEmpleadActuales";
             this.dgEmpleadActuales.RowTemplate.Height = 25;
-            this.dgEmpleadActuales.Size = new System.Drawing.Size(702, 229);
+            this.dgEmpleadActuales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgEmpleadActuales.Size = new System.Drawing.Size(666, 229);
             this.dgEmpleadActuales.TabIndex = 16;
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(572, 267);
+            this.btnModificar.Location = new System.Drawing.Point(512, 268);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 17;
@@ -90,7 +94,7 @@ namespace FrmPetShopUI
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(663, 267);
+            this.btnAgregar.Location = new System.Drawing.Point(603, 268);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 18;
@@ -100,7 +104,7 @@ namespace FrmPetShopUI
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(36, 267);
+            this.btnActualizar.Location = new System.Drawing.Point(12, 268);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 23);
             this.btnActualizar.TabIndex = 19;
@@ -108,12 +112,22 @@ namespace FrmPetShopUI
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(13, 6);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(18, 15);
+            this.lblId.TabIndex = 20;
+            this.lblId.Text = "ID";
+            // 
             // FrmABMUsuariosTienda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(798, 323);
+            this.ClientSize = new System.Drawing.Size(694, 323);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnModificar);
@@ -135,9 +149,10 @@ namespace FrmPetShopUI
 
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.DataGridView dgEmpleadActuales;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnActualizar;
+        public System.Windows.Forms.DataGridView dgEmpleadActuales;
+        private System.Windows.Forms.Label lblId;
     }
 }

@@ -108,6 +108,7 @@ namespace FrmPetShopUI
             this.Name = "FrmCargarNuevoUsuarioApp";
             this.Text = "FrmCargarNuevoUsuarioApp";
             this.Load += new System.EventHandler(this.FrmCargarNuevoUsuarioApp_Load);
+            this.Controls.SetChildIndex(this.lblId, 0);
             this.Controls.SetChildIndex(this.label6, 0);
             this.Controls.SetChildIndex(this.txtUsuario, 0);
             this.Controls.SetChildIndex(this.label7, 0);
@@ -136,6 +137,6 @@ namespace FrmPetShopUI
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.TextBox txtClave;
         public System.Windows.Forms.Label label7;
-        private System.Windows.Forms.CheckBox cbEsAdmin;
+        public System.Windows.Forms.CheckBox cbEsAdmin;
     }
 }

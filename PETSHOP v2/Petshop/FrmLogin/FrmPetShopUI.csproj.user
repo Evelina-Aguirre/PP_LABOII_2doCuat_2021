@@ -16,6 +16,9 @@
     <Compile Update="FrmEditarSaldoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmModificarUsuarioAppExistente.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmOlvidoClave_PruebaApp.cs">
       <SubType>Form</SubType>
     </Compile>
