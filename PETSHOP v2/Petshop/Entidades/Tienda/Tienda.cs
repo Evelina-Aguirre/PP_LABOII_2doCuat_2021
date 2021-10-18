@@ -5,19 +5,23 @@ namespace Entidades
     public static class Tienda
     {
         public static List<Empleado> empleados;
+        public static List<Producto> ProductosDisponibles;
         public static List<Producto> stock;
         public static List<Producto> catalogo;
         public static List<Producto> compraActualDelClienteSeleccionado;
         public static List<Cliente> clientes;
+        public static float saldoTienda;
 
 
         static Tienda()
         {
             empleados = new List<Empleado>();
-            stock = new List<Producto>();
+            ProductosDisponibles = new List<Producto>();
             catalogo = new List<Producto>();
             clientes = new List<Cliente>();
             compraActualDelClienteSeleccionado = new List<Producto>();
+            stock = new List<Producto>();
+            saldoTienda = 10000000;
 
 
             CargarEmpleadosActuales();
@@ -33,7 +37,7 @@ namespace Entidades
         }
         public static List<Producto> Stock
         {
-            get { return stock; }
+            get { return ProductosDisponibles; }
 
         }
 
@@ -70,6 +74,14 @@ namespace Entidades
             foreach (Producto item in auxListaAAgregarCarrito)
             {
                 compraActualDelClienteSeleccionado.Add(item);
+            }
+        }
+
+        public static void ComprarStock(List<Producto> auxListaAAgregarCarrito)
+        {
+            foreach (Producto item in auxListaAAgregarCarrito)
+            {
+                stock.Add(item);
             }
         }
 
@@ -163,58 +175,64 @@ namespace Entidades
 
 
 
-            stock.Add(p1);
-            stock.Add(p2);
-            stock.Add(p3);
-            stock.Add(p4);
-            stock.Add(p5);
-            stock.Add(p6);
-            stock.Add(p7);
-            stock.Add(p8);
-            stock.Add(p9);
-            stock.Add(p10);
-            stock.Add(p11);
-            stock.Add(p12);
-            stock.Add(p13);
-            stock.Add(p16);
-            stock.Add(p17);
-            stock.Add(p18);
-            stock.Add(p19);
-            stock.Add(p20);
-            stock.Add(p21);
-            stock.Add(p22);
-            stock.Add(p23);
-            stock.Add(p24);
-            stock.Add(p25);
-            stock.Add(p26);
-            stock.Add(p27);
-            stock.Add(p28);
-            stock.Add(p31);
-            stock.Add(p32);
-            stock.Add(p33);
-            stock.Add(p34);
-            stock.Add(p35);
-            stock.Add(p38);
-            stock.Add(p39);
-            stock.Add(p40);
-            stock.Add(p41);
-            stock.Add(p42);
-            stock.Add(p43);
-            stock.Add(p44);
-            stock.Add(p45);
-            stock.Add(p46);
-            stock.Add(p47);
-            stock.Add(p49);
-            stock.Add(p50);
-            stock.Add(p53);
-            stock.Add(p54);
-            stock.Add(p55);
-            stock.Add(p56);
-            stock.Add(p57);
-            stock.Add(p58);
+            ProductosDisponibles.Add(p1);
+            ProductosDisponibles.Add(p2);
+            ProductosDisponibles.Add(p3);
+            ProductosDisponibles.Add(p4);
+            ProductosDisponibles.Add(p5);
+            ProductosDisponibles.Add(p6);
+            ProductosDisponibles.Add(p7);
+            ProductosDisponibles.Add(p8);
+            ProductosDisponibles.Add(p9);
+            ProductosDisponibles.Add(p10);
+            ProductosDisponibles.Add(p11);
+            ProductosDisponibles.Add(p12);
+            ProductosDisponibles.Add(p13);
+            ProductosDisponibles.Add(p16);
+            ProductosDisponibles.Add(p17);
+            ProductosDisponibles.Add(p18);
+            ProductosDisponibles.Add(p19);
+            ProductosDisponibles.Add(p20);
+            ProductosDisponibles.Add(p21);
+            ProductosDisponibles.Add(p22);
+            ProductosDisponibles.Add(p23);
+            ProductosDisponibles.Add(p24);
+            ProductosDisponibles.Add(p25);
+            ProductosDisponibles.Add(p26);
+            ProductosDisponibles.Add(p27);
+            ProductosDisponibles.Add(p28);
+            ProductosDisponibles.Add(p31);
+            ProductosDisponibles.Add(p32);
+            ProductosDisponibles.Add(p33);
+            ProductosDisponibles.Add(p34);
+            ProductosDisponibles.Add(p35);
+            ProductosDisponibles.Add(p38);
+            ProductosDisponibles.Add(p39);
+            ProductosDisponibles.Add(p40);
+            ProductosDisponibles.Add(p41);
+            ProductosDisponibles.Add(p42);
+            ProductosDisponibles.Add(p43);
+            ProductosDisponibles.Add(p44);
+            ProductosDisponibles.Add(p45);
+            ProductosDisponibles.Add(p46);
+            ProductosDisponibles.Add(p47);
+            ProductosDisponibles.Add(p49);
+            ProductosDisponibles.Add(p50);
+            ProductosDisponibles.Add(p53);
+            ProductosDisponibles.Add(p54);
+            ProductosDisponibles.Add(p55);
+            ProductosDisponibles.Add(p56);
+            ProductosDisponibles.Add(p57);
+            ProductosDisponibles.Add(p58);
 
 
 
+        }
+
+
+        public static void CargarEnSistemaStockTienda()
+        {
+            
         }
         public static void CargarClientes()
         {
@@ -305,7 +323,7 @@ namespace Entidades
         public static List<Producto> BuscarProducto(string aux)
         {
             List<Producto> listaAux = new List<Producto>();
-            for (int i = 0; i < Tienda.stock.Count; i++)
+            for (int i = 0; i < Tienda.ProductosDisponibles.Count; i++)
             {
                 if (Tienda.Stock[i].Nombre.ToString().Trim().ToLower() == aux)
                 {
