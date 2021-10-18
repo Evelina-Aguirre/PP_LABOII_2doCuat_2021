@@ -72,19 +72,26 @@ namespace Frm_Petshop_UI
 
             Persona auxPersona = Tienda.LogIn(txtUsuario.Text, txtClave.Text);
 
-            if(auxPersona != null)
+            try
             {
 
-                Frm_Emplead_ interfazEmpleado = new Frm_Emplead_();
+
+                if (auxPersona != null)
+                {
+
+                    Frm_Emplead_ interfazEmpleado = new Frm_Emplead_();
                     interfazEmpleado.Show();
-              
-                this.Hide();
+
+                    this.Hide();
+                }
             }
-            else
+            catch (UsuarioInvalidoException ex)
             {
-                lblErrorMsj.Text = "Usuario o contraseña incorrectos.";
-            } 
-            
+                lblErrorMsj.Text = ex.Message;
+            }
+
+
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

@@ -121,10 +121,10 @@ namespace FrmProducto
         {
             List<Producto> listaAux = new List<Producto>();
 
-            //Busca producto por Nombre/Marca y carga la lista
+            
             listaAux = Tienda.BuscarProducto(txtBuscat.Text.ToString().Trim().ToLower());
 
-            //En caso de buscar un entero intentará compararlo con id del Producto.
+            
             if (int.TryParse(txtBuscat.Text, out int id))
             {
                 listaAux.Add(Tienda.BuscarProductoPorId(id));
@@ -158,7 +158,7 @@ namespace FrmProducto
             {
                 Producto auxProducto = new Producto();
                 auxProducto = Tienda.BuscarProductoPorId(Convert.ToInt32(dgProductos.CurrentRow.Cells[4].Value));
-                //Controls.Add(this.dgCarrito);
+                
                 dgCarrito.ColumnCount = 5;
                 this.dgCarrito.Columns[0].Name = "Nombre";
                 this.dgCarrito.Columns[1].Name = "Marca";
@@ -198,10 +198,10 @@ namespace FrmProducto
 
         private void Frm_Producto_MouseMove(object sender, MouseEventArgs e)
         {
-            //if (m == 1)
-            //{
-            //    this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
-            //}
+            if (m == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
+            }
 
         }
     }

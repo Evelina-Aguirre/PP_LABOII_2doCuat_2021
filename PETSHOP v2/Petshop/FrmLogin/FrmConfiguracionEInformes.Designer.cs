@@ -115,7 +115,7 @@ namespace FrmPetShopUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(418, 370);
+            this.ClientSize = new System.Drawing.Size(418, 272);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);

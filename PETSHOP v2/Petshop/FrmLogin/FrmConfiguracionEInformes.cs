@@ -35,7 +35,7 @@ namespace FrmPetShopUI
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)

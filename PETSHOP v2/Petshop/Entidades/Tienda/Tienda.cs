@@ -96,6 +96,16 @@ namespace Entidades
             empleados.Add(e2);
             empleados.Add(a1);
         }
+        public static bool VerificarSaldoSuficiente(int saldo, int totalCompra)
+        {
+            if (saldo >= totalCompra)
+                return true;
+            else
+            {
+                ClienteSinDineroExcepcion clientesinDineroEx = new ClienteSinDineroExcepcion();
+                throw clientesinDineroEx;
+            }
+        }
 
         public static void CargarProducto()
         {
@@ -297,7 +307,8 @@ namespace Entidades
 
                 }
             }
-            return null;
+            UsuarioInvalidoException userPassInvalido = new UsuarioInvalidoException();
+            throw userPassInvalido;
         }
 
     

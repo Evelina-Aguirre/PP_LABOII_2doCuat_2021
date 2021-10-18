@@ -239,8 +239,11 @@ namespace Frm_Petshop_UI
                     total = Tienda.SumarPrecioArticulosAgregados(Tienda.CompraActualDelClienteSeleccionado);
                     totalConEnvio = Convert.ToInt32(lblTotalCompra.Text) + Convert.ToInt32(lblEnvio.Text);
 
-                    if (totalConEnvio <= saldo)
+                    try
                     {
+
+
+                        Tienda.VerificarSaldoSuficiente(saldo, (int)totalConEnvio);
                         float aux;
 
                         for (int i = 0; i < Tienda.Clientes.Count; i++)
@@ -258,87 +261,87 @@ namespace Frm_Petshop_UI
                         SoundPlayer sonidoVenta = new SoundPlayer(@"C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\Sonido\Windows Unlock.wav");
                         sonidoVenta.Play();
                         MessageBox.Show("La venta se realizó de manera exitosa");
-                        
+                    
 
                     }
-                    else
+                    catch (ClienteSinDineroExcepcion ex)
                     {
-                        MessageBox.Show("El saldo del cliente no es suficiente para realizar la compra.", "Error");
-
-
+                        MessageBox.Show(ex.Message);
                     }
+
                 }
-                else
-                {
-                    MessageBox.Show("Para vender debe selecionar almenos un producto.", "Error");
-                }
-            }
 
-
-        }
-
-        private void btnAgregarACarrito_Click(object sender, EventArgs e)
-        {
-
-            Producto auxProducto = new Producto();
-            auxProducto = Tienda.BuscarProductoPorId(Convert.ToInt32(dgCarritoFrmPriuncipal.CurrentRow.Cells[5].Value));
-            if (dgCarritoFrmPriuncipal.RowCount > 1 && dgCarritoFrmPriuncipal.SelectedRows != null && lblTotalCompra.Text != null && dgCarritoFrmPriuncipal.CurrentRow.Cells[1].Value != null)
+            else
             {
-                lblTotalCompra.Text = Tienda.RestarPrecioArticuloBorrado(float.Parse(lblTotalCompra.Text), Convert.ToInt32(dgCarritoFrmPriuncipal.CurrentRow.Cells[4].Value)).ToString();
-                Tienda.CompraActualDelClienteSeleccionado.Remove(auxProducto);
-                dgCarritoFrmPriuncipal.Rows.Remove(dataGridViewRow: dgCarritoFrmPriuncipal.CurrentRow);
-
+                MessageBox.Show("Para vender debe selecionar almenos un producto.", "Error");
             }
         }
 
-        private void btnNuevoCliente_Click(object sender, EventArgs e)
-        {
-            lblErrorNuevoCliente.Text = "Para cargar un nuevo cliente debe loguearse como Admin.";
-            timer1.Start();
-        }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            lblMsjErrorLogAdmin.Text = "Para ingresar a configuración loguearse con perfil de Administrador.";
-            timer1.Start();
-        }
+    }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            lblMsjErrorLogAdmin.Text = String.Empty;
-            lblErrorNuevoCliente.Text = String.Empty;
-            timer1.Stop();
-        }
+    private void btnAgregarACarrito_Click(object sender, EventArgs e)
+    {
 
-        private void button4_Click(object sender, EventArgs e)
+        Producto auxProducto = new Producto();
+        auxProducto = Tienda.BuscarProductoPorId(Convert.ToInt32(dgCarritoFrmPriuncipal.CurrentRow.Cells[5].Value));
+        if (dgCarritoFrmPriuncipal.RowCount > 1 && dgCarritoFrmPriuncipal.SelectedRows != null && lblTotalCompra.Text != null && dgCarritoFrmPriuncipal.CurrentRow.Cells[1].Value != null)
         {
-            if (MessageBox.Show("¿Desea cambiar de usuario?", "Cambio Usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                FrmCambiarPerfil frmCambiaPerfil = new FrmCambiarPerfil();
-                frmCambiaPerfil.Show();
-                this.Hide();
-            }
-
-        }
-
-        private void btnEditarCliente_Click(object sender, EventArgs e)
-        {
-            lblErrorNuevoCliente.Text = "Para Cargar/Modificar un nuevo cliente necesita permisos de Admin.";
-            timer1.Start();
-        }
-
-        private void Frm_Emplead__MouseUp(object sender, MouseEventArgs e)
-        {
-            m = 0;
-        }
-
-        private void Frm_Emplead__MouseMove(object sender, MouseEventArgs e)
-        {
-            //if (m == 1)
-            //{
-            //    this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
-            //}
+            lblTotalCompra.Text = Tienda.RestarPrecioArticuloBorrado(float.Parse(lblTotalCompra.Text), Convert.ToInt32(dgCarritoFrmPriuncipal.CurrentRow.Cells[4].Value)).ToString();
+            Tienda.CompraActualDelClienteSeleccionado.Remove(auxProducto);
+            dgCarritoFrmPriuncipal.Rows.Remove(dataGridViewRow: dgCarritoFrmPriuncipal.CurrentRow);
 
         }
     }
+
+    private void btnNuevoCliente_Click(object sender, EventArgs e)
+    {
+        lblErrorNuevoCliente.Text = "Para cargar un nuevo cliente debe loguearse como Admin.";
+        timer1.Start();
+    }
+
+    private void button2_Click(object sender, EventArgs e)
+    {
+        lblMsjErrorLogAdmin.Text = "Para ingresar a configuración loguearse con perfil de Administrador.";
+        timer1.Start();
+    }
+
+    private void timer1_Tick(object sender, EventArgs e)
+    {
+        lblMsjErrorLogAdmin.Text = String.Empty;
+        lblErrorNuevoCliente.Text = String.Empty;
+        timer1.Stop();
+    }
+
+    private void button4_Click(object sender, EventArgs e)
+    {
+        if (MessageBox.Show("¿Desea cambiar de usuario?", "Cambio Usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+        {
+            FrmCambiarPerfil frmCambiaPerfil = new FrmCambiarPerfil();
+            frmCambiaPerfil.Show();
+            this.Hide();
+        }
+
+    }
+
+    private void btnEditarCliente_Click(object sender, EventArgs e)
+    {
+        lblErrorNuevoCliente.Text = "Para Cargar/Modificar un nuevo cliente necesita permisos de Admin.";
+        timer1.Start();
+    }
+
+    private void Frm_Emplead__MouseUp(object sender, MouseEventArgs e)
+    {
+        m = 0;
+    }
+
+    private void Frm_Emplead__MouseMove(object sender, MouseEventArgs e)
+    {
+        //if (m == 1)
+        //{
+        //    this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
+        //}
+
+    }
+}
 }
