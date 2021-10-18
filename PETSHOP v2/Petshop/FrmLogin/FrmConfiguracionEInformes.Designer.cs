@@ -34,6 +34,8 @@ namespace FrmPetShopUI
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -54,7 +56,7 @@ namespace FrmPetShopUI
             this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel2.Image = ((System.Drawing.Image)(resources.GetObject("linkLabel2.Image")));
             this.linkLabel2.LinkColor = System.Drawing.Color.Transparent;
-            this.linkLabel2.Location = new System.Drawing.Point(936, 3);
+            this.linkLabel2.Location = new System.Drawing.Point(349, 0);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(28, 32);
             this.linkLabel2.TabIndex = 13;
@@ -70,7 +72,7 @@ namespace FrmPetShopUI
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel1.Image = ((System.Drawing.Image)(resources.GetObject("linkLabel1.Image")));
             this.linkLabel1.LinkColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Location = new System.Drawing.Point(959, 1);
+            this.linkLabel1.Location = new System.Drawing.Point(372, -2);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(28, 32);
             this.linkLabel1.TabIndex = 12;
@@ -88,12 +90,34 @@ namespace FrmPetShopUI
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(52, 122);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(340, 23);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "ABM Usuarios Aplicacion";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
+            this.button13.Location = new System.Drawing.Point(325, 196);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(52, 35);
+            this.button13.TabIndex = 19;
+            this.button13.UseVisualStyleBackColor = true;
+            // 
             // FrmConfiguracionEInformes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(988, 591);
+            this.ClientSize = new System.Drawing.Size(418, 370);
+            this.Controls.Add(this.button13);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
@@ -114,5 +138,7 @@ namespace FrmPetShopUI
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        public System.Windows.Forms.Button button13;
     }
 }

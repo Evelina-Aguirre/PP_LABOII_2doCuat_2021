@@ -1,37 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Entidades;
-using FrmCargarNuevoCliente;
+﻿using Entidades;
 using FrmPetShopUI;
+using System;
+using System.Collections.Generic;
+using System.Media;
+using System.Windows.Forms;
 
 namespace Frm_Petshop_UI
 {
     public partial class Frm_Emplead_ : Form
     {
         List<Producto> auxlistProductoFrmEmpleado;
-        
-        
+
+
         int m, mx, my;
         private Producto listaCarrito;
-        
+
         public Frm_Emplead_()
         {
             InitializeComponent();
             auxlistProductoFrmEmpleado = new List<Producto>();
-           
+
         }
 
 
         private void Frm_Emplead__Load(object sender, EventArgs e)
         {
-            
+
             Cliente auxCliente = new Cliente("", "", 0);
             for (int i = 0; i < Tienda.Clientes.Count; i++)
             {
@@ -90,7 +84,7 @@ namespace Frm_Petshop_UI
         private void button1_Click(object sender, EventArgs e)
         {
             dgClientesActuales.Rows.Clear();
-      
+
             Cliente auxCliente = new Cliente("", "", 0);
             for (int i = 0; i < Tienda.Clientes.Count; i++)
             {
@@ -169,40 +163,45 @@ namespace Frm_Petshop_UI
 
         private void button3_Click(object sender, EventArgs e)
         {
-                Producto auxProducto = new Producto();
-                Cliente auxCliente = new Cliente("","",0);
+            Producto auxProducto = new Producto();
+            Cliente auxCliente = new Cliente("", "", 0);
 
+            if (!string.IsNullOrEmpty(lblNombre.Text))
+            {
                 auxCliente = Tienda.BuscarClientePorId(Convert.ToInt32(lblIdCliente.Text));
-
-                dgCarritoFrmPriuncipal.Rows.Clear();
-
-                for (int i = 0; i < Tienda.CompraActualDelClienteSeleccionado.Count; i++)
+                Envio.EFormaEnvio formaEnvio = Envio.CalcularFormadeEnvio(auxCliente, Tienda.CompraActualDelClienteSeleccionado);
+                lblModoEnvio.Text = formaEnvio.ToString();
+                if (formaEnvio == Envio.EFormaEnvio.moto)
                 {
-                    auxProducto = Tienda.CompraActualDelClienteSeleccionado[i];
+                    lblEnvio.Text = "120";
+                }
+                else
+                {
+                    lblEnvio.Text = "300";
+                }
+            }
 
-                    dgCarritoFrmPriuncipal.ColumnCount = 6;
-                    this.dgCarritoFrmPriuncipal.Columns[0].Name = "Nombre";
-                    this.dgCarritoFrmPriuncipal.Columns[1].Name = "Marca";
-                    this.dgCarritoFrmPriuncipal.Columns[2].Name = "Categoría";
-                    this.dgCarritoFrmPriuncipal.Columns[3].Name = "Cantidad";
-                    this.dgCarritoFrmPriuncipal.Columns[4].Name = "Precio";
-                    this.dgCarritoFrmPriuncipal.Columns[5].Name = "ID Producto";
+            dgCarritoFrmPriuncipal.Rows.Clear();
+
+            for (int i = 0; i < Tienda.CompraActualDelClienteSeleccionado.Count; i++)
+            {
+                auxProducto = Tienda.CompraActualDelClienteSeleccionado[i];
+
+                dgCarritoFrmPriuncipal.ColumnCount = 6;
+                this.dgCarritoFrmPriuncipal.Columns[0].Name = "Nombre";
+                this.dgCarritoFrmPriuncipal.Columns[1].Name = "Marca";
+                this.dgCarritoFrmPriuncipal.Columns[2].Name = "Categoría";
+                this.dgCarritoFrmPriuncipal.Columns[3].Name = "Cantidad";
+                this.dgCarritoFrmPriuncipal.Columns[4].Name = "Precio";
+                this.dgCarritoFrmPriuncipal.Columns[5].Name = "ID Producto";
 
                 dgCarritoFrmPriuncipal.Rows.Add(auxProducto.Nombre, auxProducto.Marca, auxProducto.Categoria, 1, auxProducto.Precio, auxProducto.Id);
 
-                }
+            }
             lblTotalCompra.Text = Tienda.SumarPrecioArticulosAgregados(Tienda.CompraActualDelClienteSeleccionado).ToString();
-            Envio.EFormaEnvio formaEnvio = Envio.CalcularFormadeEnvio(auxCliente, Tienda.CompraActualDelClienteSeleccionado);
-            lblModoEnvio.Text = formaEnvio.ToString();
-            
-            if (formaEnvio == Envio.EFormaEnvio.moto)
-            {
-                lblEnvio.Text = "120";
-            }
-            else
-            {
-                lblEnvio.Text = "300";
-            }
+
+
+
 
         }
 
@@ -213,7 +212,7 @@ namespace Frm_Petshop_UI
             float total = 0;
             float totalConEnvio = 0;
 
-            if (string.IsNullOrEmpty(lblNombreCliente.Text.ToString()))
+            if (string.IsNullOrEmpty(lblNombreCliente.Text))
             {
                 MessageBox.Show("Para vender debe selecionar un cliente.");
 
@@ -224,6 +223,19 @@ namespace Frm_Petshop_UI
                 {
                     auxClienteId = Convert.ToInt32(lblIdCliente.Text);
                     saldo = Convert.ToInt32(lblSaldo.Text);
+                    Cliente auxCliente = new Cliente("", "", 0);
+
+                    auxCliente = Tienda.BuscarClientePorId(Convert.ToInt32(lblIdCliente.Text));
+                    Envio.EFormaEnvio formaEnvio = Envio.CalcularFormadeEnvio(auxCliente, Tienda.CompraActualDelClienteSeleccionado);
+                    lblModoEnvio.Text = formaEnvio.ToString();
+                    if (formaEnvio == Envio.EFormaEnvio.moto)
+                    {
+                        lblEnvio.Text = "120";
+                    }
+                    else
+                    {
+                        lblEnvio.Text = "300";
+                    }
                     total = Tienda.SumarPrecioArticulosAgregados(Tienda.CompraActualDelClienteSeleccionado);
                     totalConEnvio = Convert.ToInt32(lblTotalCompra.Text) + Convert.ToInt32(lblEnvio.Text);
 
@@ -240,10 +252,13 @@ namespace Frm_Petshop_UI
                                 lblSaldo.Text = Tienda.Clientes[i].Saldo.ToString();
                                 break;
                             }
-                           
+
                         }
+                        Tienda.SumarADeSaldoTienda(totalConEnvio);
+                        SoundPlayer sonidoVenta = new SoundPlayer(@"C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\Sonido\Windows Unlock.wav");
+                        sonidoVenta.Play();
                         MessageBox.Show("La venta se realizó de manera exitosa");
-                        Tienda.SumarADeSaldoTienda(total);
+                        
 
                     }
                     else
@@ -264,7 +279,7 @@ namespace Frm_Petshop_UI
 
         private void btnAgregarACarrito_Click(object sender, EventArgs e)
         {
-            
+
             Producto auxProducto = new Producto();
             auxProducto = Tienda.BuscarProductoPorId(Convert.ToInt32(dgCarritoFrmPriuncipal.CurrentRow.Cells[5].Value));
             if (dgCarritoFrmPriuncipal.RowCount > 1 && dgCarritoFrmPriuncipal.SelectedRows != null && lblTotalCompra.Text != null && dgCarritoFrmPriuncipal.CurrentRow.Cells[1].Value != null)
@@ -297,18 +312,19 @@ namespace Frm_Petshop_UI
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("¿Desea cambiar de usuario?", "Cambio Usuario",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("¿Desea cambiar de usuario?", "Cambio Usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 FrmCambiarPerfil frmCambiaPerfil = new FrmCambiarPerfil();
                 frmCambiaPerfil.Show();
                 this.Hide();
             }
-  
+
         }
 
         private void btnEditarCliente_Click(object sender, EventArgs e)
         {
-            
+            lblErrorNuevoCliente.Text = "Para Cargar/Modificar un nuevo cliente necesita permisos de Admin.";
+            timer1.Start();
         }
 
         private void Frm_Emplead__MouseUp(object sender, MouseEventArgs e)

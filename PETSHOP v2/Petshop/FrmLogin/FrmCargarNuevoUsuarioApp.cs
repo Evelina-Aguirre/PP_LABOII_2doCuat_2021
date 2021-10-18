@@ -1,6 +1,7 @@
 ﻿using Entidades;
 using FrmCargarNuevoCliente;
 using System;
+using System.Media;
 using System.Windows.Forms;
 
 namespace FrmPetShopUI
@@ -57,6 +58,8 @@ namespace FrmPetShopUI
                     Tienda.Empleados.Add(auxEmplead_);
                 }
 
+                SoundPlayer sonidoVenta = new SoundPlayer(@"C:\Users\Usuario\source\repos\PP_LABOII_Evelina_Aguirre_2E\PP_LABOII_2doCuat_2021\PETSHOP v2\Petshop\Sonido\Windows Unlock.wav");
+                sonidoVenta.Play();
                 MessageBox.Show("Se dió de alta al usuario correctamente.");
                 this.Close();
             }

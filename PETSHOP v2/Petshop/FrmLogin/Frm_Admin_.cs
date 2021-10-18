@@ -37,5 +37,12 @@ namespace FrmPetShopUI
             FrmConfiguracionEInformes frmConfEInformes = new FrmConfiguracionEInformes();
             frmConfEInformes.Show();
         }
+
+        private void btnEditarCliente_Click(object sender, EventArgs e)
+        {
+            FrmCrearModificarCliente frmModificarClienteExistente = new FrmCrearModificarCliente();
+            frmModificarClienteExistente.lblId.Text = lblIdCliente.Text;
+            frmModificarClienteExistente.ShowDialog();
+        }
     }
 }

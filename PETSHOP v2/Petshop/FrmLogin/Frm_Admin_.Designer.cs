@@ -64,7 +64,7 @@ namespace FrmPetShopUI
             // 
             this.btnNuevoCliente.Click += new System.EventHandler(this.btnNuevoCliente_Click);
             // 
-            // button3
+            // btnActualizarListaCarrito
             // 
             this.btnActualizarListaCarrito.FlatAppearance.BorderSize = 0;
             // 
@@ -80,6 +80,11 @@ namespace FrmPetShopUI
             // 
             this.btnConfiguracion.FlatAppearance.BorderSize = 0;
             this.btnConfiguracion.Click += new System.EventHandler(this.btnConfiguracion_Click);
+            // 
+            // btnEditarCliente
+            // 
+            this.btnEditarCliente.FlatAppearance.BorderSize = 0;
+            this.btnEditarCliente.Click += new System.EventHandler(this.btnEditarCliente_Click);
             // 
             // Frm_Admin_
             // 

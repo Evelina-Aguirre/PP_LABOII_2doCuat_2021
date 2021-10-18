@@ -711,10 +711,10 @@ namespace Frm_Petshop_UI
         public System.Windows.Forms.Label lblMsjErrorLogAdmin;
         public System.Windows.Forms.Button btnConfiguracion;
         private System.Windows.Forms.Label lblErrorNuevoCliente;
-        private System.Windows.Forms.Button btnEditarCliente;
         public System.Windows.Forms.Label lblModoEnvio;
         public System.Windows.Forms.Label label10;
         public System.Windows.Forms.Label lblEnvio;
+        public System.Windows.Forms.Button btnEditarCliente;
     }
 }
 

@@ -36,13 +36,13 @@ namespace FrmPetShopUI
                 this.dgEmpleadActuales.Columns[4].Name = "Usuario";
                 this.dgEmpleadActuales.Columns[5].Name = "Clave";
                 this.dgEmpleadActuales.Columns[6].Name = "ID";
-                dgEmpleadActuales.Rows.Add(auxEmplead_.Nombre, auxEmplead_.Apellido, auxEmplead_.Dni, auxEmplead_.Sueldo, auxEmplead_.Usuario, auxEmplead_.Clave,auxEmplead_.Id);
+                dgEmpleadActuales.Rows.Add(auxEmplead_.Nombre, auxEmplead_.Apellido, auxEmplead_.Dni, auxEmplead_.Sueldo, auxEmplead_.Usuario, auxEmplead_.Clave, auxEmplead_.Id);
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             FrmModificarUsuarioAppExistente frmNuevoUsuario = new FrmModificarUsuarioAppExistente();
             frmNuevoUsuario.lblId.Text = dgEmpleadActuales.CurrentRow.Cells[6].Value.ToString();
             frmNuevoUsuario.ShowDialog();
@@ -66,7 +66,7 @@ namespace FrmPetShopUI
                 this.dgEmpleadActuales.Columns[5].Name = "Clave";
                 this.dgEmpleadActuales.Columns[6].Name = "ID";
 
-                dgEmpleadActuales.Rows.Add(auxEmplead_.Nombre, auxEmplead_.Apellido, auxEmplead_.Dni, auxEmplead_.Sueldo, auxEmplead_.Usuario, auxEmplead_.Clave,auxEmplead_.Id);
+                dgEmpleadActuales.Rows.Add(auxEmplead_.Nombre, auxEmplead_.Apellido, auxEmplead_.Dni, auxEmplead_.Sueldo, auxEmplead_.Usuario, auxEmplead_.Clave, auxEmplead_.Id);
             }
 
 
@@ -87,6 +87,18 @@ namespace FrmPetShopUI
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnQuitar_Click(object sender, EventArgs e)
+        {
+            if (dgEmpleadActuales.Rows.Count > 0 && dgEmpleadActuales.CurrentRow.Cells[0].Value != null)
+            {
+                Empleado auxEmplead_ = new Empleado("", "", 0, 0, "", "");
+                auxEmplead_ = Tienda.BuscarEmpleadoPorId(Convert.ToInt32(dgEmpleadActuales.CurrentRow.Cells[6].Value));
+                Tienda.Empleados.Remove(auxEmplead_);
+                dgEmpleadActuales.Rows.Remove(dgEmpleadActuales.CurrentRow);
+            }
+
         }
     }
 }

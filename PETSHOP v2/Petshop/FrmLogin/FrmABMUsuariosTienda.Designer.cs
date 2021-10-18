@@ -37,6 +37,7 @@ namespace FrmPetShopUI
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.lblId = new System.Windows.Forms.Label();
+            this.btnQuitar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgEmpleadActuales)).BeginInit();
             this.SuspendLayout();
             // 
@@ -121,12 +122,23 @@ namespace FrmPetShopUI
             this.lblId.TabIndex = 20;
             this.lblId.Text = "ID";
             // 
+            // btnQuitar
+            // 
+            this.btnQuitar.Location = new System.Drawing.Point(421, 268);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(75, 23);
+            this.btnQuitar.TabIndex = 21;
+            this.btnQuitar.Text = "Quitar";
+            this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
+            // 
             // FrmABMUsuariosTienda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(694, 323);
+            this.Controls.Add(this.btnQuitar);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnAgregar);
@@ -154,5 +166,6 @@ namespace FrmPetShopUI
         private System.Windows.Forms.Button btnActualizar;
         public System.Windows.Forms.DataGridView dgEmpleadActuales;
         private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Button btnQuitar;
     }
 }
