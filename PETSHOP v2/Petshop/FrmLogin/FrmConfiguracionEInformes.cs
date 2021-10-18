@@ -27,5 +27,15 @@ namespace FrmPetShopUI
             FrmRenovarSrockProductos frmComprar = new FrmRenovarSrockProductos();
             frmComprar.ShowDialog();
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

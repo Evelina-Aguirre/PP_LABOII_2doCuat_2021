@@ -390,6 +390,24 @@ namespace Entidades
             return auxTotalActual - producto;
         }
 
+        public static float RestarSumaDeSaldoTienda(float auxTotalaRestar)
+        {
+            float saldoTiendaActualizado;
+            saldoTiendaActualizado = Tienda.saldoTienda - auxTotalaRestar;
+            Tienda.saldoTienda = saldoTiendaActualizado;
+            return saldoTiendaActualizado;
+
+        }
+
+        public static float SumarADeSaldoTienda(float auxTotalaRestar)
+        {
+            float saldoTiendaActualizado;
+            saldoTiendaActualizado = Tienda.saldoTienda + auxTotalaRestar;
+            Tienda.saldoTienda = saldoTiendaActualizado;
+            return saldoTiendaActualizado;
+
+        }
+
         public static List<Cliente> BuscarCliente(int aux)
         {
             List<Cliente> clientesAux = new List<Cliente>();

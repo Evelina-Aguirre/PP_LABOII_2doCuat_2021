@@ -181,6 +181,7 @@ namespace FrmPetShopUI
             this.linkLabel2.TabIndex = 11;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "  ";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // button2
             // 
@@ -234,6 +235,7 @@ namespace FrmPetShopUI
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmRenovarSrockProductos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Comprar Stock";
             this.Load += new System.EventHandler(this.FrmRenovarSrockProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgProductosDisponibles)).EndInit();

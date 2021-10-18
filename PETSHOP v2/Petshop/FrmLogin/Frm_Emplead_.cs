@@ -223,6 +223,7 @@ namespace Frm_Petshop_UI
                            
                         }
                         MessageBox.Show("La venta se realizó de manera exitosa");
+                        Tienda.SumarADeSaldoTienda(total);
 
                     }
                     else

@@ -63,7 +63,7 @@ namespace FrmPetShopUI
 
             dgCarritoAdquirirStock.Rows.Add(auxProducto.Nombre, auxProducto.Marca, auxProducto.Precio, auxProducto.Medida, auxProducto.Id, 1, auxProducto.Categoria);
             listaauxProducto.Add(auxProducto);
-            lblTotalCompra.Text = Tienda.SumarPrecioArticulosAgregados(Tienda.Stock).ToString();
+            lblTotalCompra.Text = Tienda.SumarPrecioArticulosAgregados(listaauxProducto).ToString();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -87,14 +87,22 @@ namespace FrmPetShopUI
         private void button1_Click(object sender, EventArgs e)
         {
             int totalCompra =Convert.ToInt32(lblTotalCompra.Text);
+            float saldoRestante;
             if (Tienda.saldoTienda >= totalCompra)
             {
                 Tienda.ComprarStock(listaauxProducto);
-                MessageBox.Show($"Compra realizada con Éxito.\nTotal:{lblTotalCompra.Text}\nSaldo restante :{Tienda.saldoTienda}");
+                saldoRestante = Tienda.RestarSumaDeSaldoTienda(totalCompra);
+                MessageBox.Show($"Compra realizada con éxito.\nTotal: {lblTotalCompra.Text}\nSaldo restante : {saldoRestante}");
+              
                 this.Close();
             }
             else
                 MessageBox.Show("El saldo de la tienda no es suficiente para realizar la compra.\nPuede remover ítems con el botón 'Quitar'.");
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
